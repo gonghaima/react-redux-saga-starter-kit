@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
 import theme, { appColor, titleColor } from './modules/theme';
 import config from './config';
 import GlobalStyles from './components/GlobalStyles';
+import { Home } from './routes/Home';
+import { NotFound } from './routes/NotFound';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -26,34 +29,25 @@ const Main = styled.main`
 class App extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
-        <AppWrapper>
-          <Helmet
-            defer={false}
-            htmlAttributes={{ lang: 'en-AU' }}
-            encodeSpecialCharacters={true}
-            defaultTitle={config.title}
-            titleTemplate={`%s | ${config.name}`}
-            titleAttributes={{ itemprop: 'name', lang: 'en-AU' }}
-          />
-          <Main>
-            <header className="App-header">
-              <p>
-                Edit <code>src/App.js</code> and save to reload.
-              </p>
-              <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn React Now
-              </a>
-            </header>
-          </Main>
-          <GlobalStyles />
-        </AppWrapper>
-      </ThemeProvider>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <AppWrapper>
+            <Helmet
+              defer={false}
+              htmlAttributes={{ lang: 'en-AU' }}
+              encodeSpecialCharacters={true}
+              defaultTitle={config.title}
+              titleTemplate={`%s | ${config.name}`}
+              titleAttributes={{ itemprop: 'name', lang: 'en-AU' }}
+            />
+            <Main>
+              <Route path="/" exact component={Home} />
+              <Route path="/notFound" component={NotFound} />
+            </Main>
+            <GlobalStyles />
+          </AppWrapper>
+        </ThemeProvider>
+      </Router>
     );
   }
 }
