@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Helmet from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
 import theme, { appColor, titleColor } from './modules/theme';
+import config from './config';
+import GlobalStyles from './components/GlobalStyles';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -26,9 +28,16 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <AppWrapper>
+          <Helmet
+            defer={false}
+            htmlAttributes={{ lang: 'en-AU' }}
+            encodeSpecialCharacters={true}
+            defaultTitle={config.title}
+            titleTemplate={`%s | ${config.name}`}
+            titleAttributes={{ itemprop: 'name', lang: 'en-AU' }}
+          />
           <Main>
             <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
               <p>
                 Edit <code>src/App.js</code> and save to reload.
               </p>
@@ -42,6 +51,7 @@ class App extends Component {
               </a>
             </header>
           </Main>
+          <GlobalStyles />
         </AppWrapper>
       </ThemeProvider>
     );
