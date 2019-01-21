@@ -17,7 +17,11 @@ export default {
     primary: appColor,
     mainBgColor,
     borderColor,
-    anchorHoverColor
+    titleColor,
+    subTitleColor,
+    focusedColor,
+    anchorHoverColor,
+    itemBgColor
   },
   button: {
     borderRadius: {

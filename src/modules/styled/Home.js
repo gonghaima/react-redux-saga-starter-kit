@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../theme';
 
 const Screen = styled.div`
   box-sizing: border-box;
@@ -6,14 +7,14 @@ const Screen = styled.div`
 `;
 
 const Container = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: ${theme.breakpoints[1]}px) {
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 64px;
     padding-top: 64px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${theme.breakpoints[2]}px) {
     padding-bottom: 64px;
     padding-top: 64px;
   }
@@ -24,6 +25,7 @@ const Container = styled.div`
   max-width: 1440px;
   position: relative;
   width: 100%;
+  padding: 16px;
   *,
   *:before,
   *:after {
@@ -34,6 +36,7 @@ const Container = styled.div`
 const HomeWrapper = styled.div`
   h2 {
     margin: 0;
+    color: ${theme.palette.titleColor};
   }
 `;
 
