@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Container,
   DisplayNumberSelect,
+  Divider,
   HomeWrapper,
   ProductCount,
   Screen,
@@ -28,6 +29,7 @@ export const Home = () => (
             </DisplayNumberSelect>
           </SummaryItem>
         </Summary>
+        <Divider />
       </HomeWrapper>
     </Container>
   </Screen>

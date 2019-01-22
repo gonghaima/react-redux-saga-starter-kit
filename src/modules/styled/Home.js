@@ -53,6 +53,15 @@ const DisplayNumberSelect = styled.select`
   box-sizing: border-box;
 `;
 
+const Divider = styled.hr`
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid ${theme.palette.borderColor};
+  margin: 0.7em 0.4em;
+  padding: 0;
+`;
+
 const Screen = styled.div`
   box-sizing: border-box;
   min-height: 100vh;
@@ -86,6 +95,7 @@ const SummaryItem = styled.div`
 export {
   Container,
   DisplayNumberSelect,
+  Divider,
   HomeWrapper,
   Screen,
   ProductCount,
