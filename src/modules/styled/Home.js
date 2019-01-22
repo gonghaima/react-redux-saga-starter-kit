@@ -34,10 +34,12 @@ const Container = styled.div`
 `;
 
 const HomeWrapper = styled.div`
-  h2 {
-    margin: 0;
-    color: ${theme.palette.titleColor};
-  }
+  color: ${theme.palette.titleColor};
 `;
 
-export { Screen, Container, HomeWrapper };
+const Title = styled.h2`
+  margin: 0;
+  color: ${theme.palette.titleColor};
+`;
+
+export { Screen, Container, HomeWrapper, Title };
