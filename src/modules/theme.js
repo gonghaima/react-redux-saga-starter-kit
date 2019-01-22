@@ -5,6 +5,7 @@ export const mainBgColor = '#f6f8fa';
 export const borderColor = '#E5E5E5';
 export const titleColor = '#6A6A6A';
 export const subTitleColor = '#BFBFBF';
+export const selectColor = '#7a7a7a';
 export const focusedColor = '#272727';
 export const anchorHoverColor = '#337ab7';
 export const itemBgColor = '#ffffff';
@@ -18,6 +19,7 @@ export default {
     mainBgColor,
     borderColor,
     titleColor,
+    selectColor,
     subTitleColor,
     focusedColor,
     anchorHoverColor,
