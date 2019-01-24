@@ -124,9 +124,39 @@ const ItemDescription = styled.h4`
   margin: 0px 0px ${theme.spacer[2]} 0px;
 `;
 
-const Screen = styled.div`
-  box-sizing: border-box;
-  min-height: 100vh;
+const Pagination = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  ul {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  li {
+    display: inline-block;
+  }
+  a {
+    z-index: 3;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    text-decoration: none;
+  }
+  .active a:hover,
+  .active a {
+    background: #fff;
+    outline: unset;
+    border-bottom: 3px solid ${theme.palette.focusedColor};
+  }
+  .disabled a {
+    color: ${theme.palette.subTitleColor};
+    cursor: not-allowed;
+  }
 `;
 
 const ProductCount = styled.span`
@@ -166,6 +196,11 @@ const ProductGrid = styled.ul`
   }
 `;
 
+const Screen = styled.div`
+  box-sizing: border-box;
+  min-height: 100vh;
+`;
+
 const Title = styled.h2`
   margin: 0;
   color: ${theme.palette.titleColor};
@@ -196,6 +231,7 @@ export {
   ItemDescription,
   ItemPrice,
   ItemTitle,
+  Pagination,
   Screen,
   ProductCount,
   ProductGrid,

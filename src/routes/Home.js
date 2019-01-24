@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPaginate from 'react-paginate';
 import {
   Container,
   DetailsSection,
@@ -11,6 +12,7 @@ import {
   ItemPrice,
   ItemTitle,
   ItemDescription,
+  Pagination,
   ProductCount,
   ProductGrid,
   Screen,
@@ -85,6 +87,21 @@ export const Home = () => (
             </Item>
           </li>
         </ProductGrid>
+        <Pagination>
+          <ReactPaginate
+            previousLabel={'< previous page'}
+            nextLabel={'next page >'}
+            breakLabel="..."
+            breakClassName="break-me"
+            pageCount={88}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={5}
+            onPageChange={() => {}}
+            containerClassName="pagination"
+            subContainerClassName="pages pagination"
+            activeClassName="active"
+          />
+        </Pagination>
       </HomeWrapper>
     </Container>
   </Screen>
