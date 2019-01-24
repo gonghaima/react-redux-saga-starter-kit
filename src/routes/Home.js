@@ -5,6 +5,7 @@ import {
   Divider,
   HomeWrapper,
   ProductCount,
+  ProductGrid,
   Screen,
   Summary,
   SummaryItem,
@@ -30,6 +31,7 @@ export const Home = () => (
           </SummaryItem>
         </Summary>
         <Divider />
+        <ProductGrid>product grid content</ProductGrid>
       </HomeWrapper>
     </Container>
   </Screen>

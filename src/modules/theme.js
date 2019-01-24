@@ -5,6 +5,7 @@ export const mainBgColor = '#f6f8fa';
 export const borderColor = '#E5E5E5';
 export const titleColor = '#6A6A6A';
 export const subTitleColor = '#BFBFBF';
+export const space = [0, 4, 8, 16, 32, 64, 128];
 export const selectColor = '#7a7a7a';
 export const focusedColor = '#272727';
 export const anchorHoverColor = '#337ab7';
@@ -35,5 +36,6 @@ export default {
       lg: [12, 28],
       xl: [14, 32]
     }
-  }
+  },
+  spacer: space.map(c => c + 'px')
 };

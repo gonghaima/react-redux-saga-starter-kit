@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import theme from '../theme';
 import { subTitleColor } from '../../modules/theme';
+import { responsive } from '../../modules/styled/utils/helpers';
 
 const Container = styled.div`
   @media (min-width: ${theme.breakpoints[1]}px) {
@@ -61,17 +62,50 @@ const Divider = styled.hr`
   margin: 0.7em 0.4em;
   padding: 0;
 `;
+const HomeWrapper = styled.div`
+  color: ${theme.palette.titleColor};
+`;
 
 const Screen = styled.div`
   box-sizing: border-box;
   min-height: 100vh;
 `;
 
-const HomeWrapper = styled.div`
-  color: ${theme.palette.titleColor};
-`;
 const ProductCount = styled.span`
   vertical-align: sub;
+`;
+const ProductGrid = styled.ul`
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: ${theme.spacer[2]};
+  grid-template-columns: 100%;
+  list-style: none;
+  margin: 0px ${theme.spacer[4]} auto 0;
+  padding: 0;
+  /* stylelint-disable */
+  ${/* istanbul ignore next */ p =>
+    responsive({
+      ix: `
+        grid-gap: ${theme.spacer[3]};
+        width: 90%;
+      `,
+      md: `
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+      `,
+      lg: `
+        grid-template-columns: repeat(3, 1fr);
+      `,
+      xl: `
+        grid-gap: ${theme.spacer[4]};
+        grid-template-columns: repeat(4, 1fr);
+      `
+    })};
+  /* stylelint-enable */
+
+  > li {
+    display: flex;
+  }
 `;
 
 const Title = styled.h2`
@@ -99,6 +133,7 @@ export {
   HomeWrapper,
   Screen,
   ProductCount,
+  ProductGrid,
   Summary,
   SummaryItem,
   Title
