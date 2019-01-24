@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../theme';
+import theme, { borderColor, itemBgColor } from '../theme';
 import { subTitleColor } from '../../modules/theme';
 import { responsive } from '../../modules/styled/utils/helpers';
 
@@ -66,6 +66,40 @@ const HomeWrapper = styled.div`
   color: ${theme.palette.titleColor};
 `;
 
+const Item = styled.div`
+  background: ${itemBgColor};
+  align-items: center;
+  border: solid 0.1rem ${borderColor};
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: ${theme.spacer[3]};
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  /* stylelint-disable */
+  ${/* istanbul ignore next */ p =>
+    responsive({
+      md: `
+        padding: ${theme.spacer[3]} ${theme.spacer[0]};
+      `,
+      lg: `
+        padding: ${theme.spacer[2]} ${theme.spacer[0]};
+      `
+    })};
+  /* stylelint-enable */
+
+  > a {
+    margin-bottom: ${theme.spacer[2]};
+  }
+
+  img {
+    height: 20rem;
+  }
+`;
+
 const Screen = styled.div`
   box-sizing: border-box;
   min-height: 100vh;
@@ -87,7 +121,7 @@ const ProductGrid = styled.ul`
     responsive({
       ix: `
         grid-gap: ${theme.spacer[3]};
-        width: 90%;
+        width: 100%;
       `,
       md: `
         grid-template-columns: repeat(2, 1fr);
@@ -131,6 +165,7 @@ export {
   DisplayNumberSelect,
   Divider,
   HomeWrapper,
+  Item,
   Screen,
   ProductCount,
   ProductGrid,
