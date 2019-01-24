@@ -30,6 +30,21 @@ const Container = styled.div`
   }
 `;
 
+const DetailsSection = styled.div`
+  border-top: 1px solid ${borderColor};
+  text-align: left;
+  padding-left: ${theme.spacer[4]};
+  padding: ${theme.spacer[3]} ${theme.spacer[0]} ${theme.spacer[3]} ${
+  theme.spacer[4]
+}
+  width: 100%;
+  display: block;
+
+  a {
+    display: block;
+  }
+`;
+
 const DisplayNumberSelect = styled.select`
   color: ${theme.palette.selectColor};
   box-sizing: border-box;
@@ -66,6 +81,23 @@ const HomeWrapper = styled.div`
   color: ${theme.palette.titleColor};
 `;
 
+const Image = styled.img`
+  height: 20rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  display: block;
+`;
+
+const ItemPrice = styled.h6`
+  color: ${theme.palette.focusedColor};
+  margin: 0;
+`;
+
+const ImageSection = styled.div`
+  padding: 16px;
+  margin: 0;
+`;
+
 const Item = styled.div`
   background: ${itemBgColor};
   align-items: center;
@@ -75,29 +107,21 @@ const Item = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
-  padding: ${theme.spacer[3]};
+  padding: 0;
   text-align: center;
   box-sizing: border-box;
   width: 100%;
-  /* stylelint-disable */
-  ${/* istanbul ignore next */ p =>
-    responsive({
-      md: `
-        padding: ${theme.spacer[3]} ${theme.spacer[0]};
-      `,
-      lg: `
-        padding: ${theme.spacer[2]} ${theme.spacer[0]};
-      `
-    })};
-  /* stylelint-enable */
+`;
 
-  > a {
-    margin-bottom: ${theme.spacer[2]};
-  }
+const ItemTitle = styled.h4`
+  color: ${theme.titleColor};
+  margin: ${theme.spacer[0]} ${theme.spacer[0]} ${theme.spacer[1]}
+    ${theme.spacer[0]};
+`;
 
-  img {
-    height: 20rem;
-  }
+const ItemDescription = styled.h4`
+  color: ${subTitleColor};
+  margin: 0px 0px ${theme.spacer[2]} 0px;
 `;
 
 const Screen = styled.div`
@@ -162,10 +186,16 @@ const SummaryItem = styled.div`
 
 export {
   Container,
+  DetailsSection,
   DisplayNumberSelect,
   Divider,
   HomeWrapper,
+  Image,
+  ImageSection,
   Item,
+  ItemDescription,
+  ItemPrice,
+  ItemTitle,
   Screen,
   ProductCount,
   ProductGrid,

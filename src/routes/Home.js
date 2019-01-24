@@ -1,10 +1,16 @@
 import React from 'react';
 import {
   Container,
+  DetailsSection,
   DisplayNumberSelect,
   Divider,
   HomeWrapper,
+  Image,
+  ImageSection,
   Item,
+  ItemPrice,
+  ItemTitle,
+  ItemDescription,
   ProductCount,
   ProductGrid,
   Screen,
@@ -34,7 +40,20 @@ export const Home = () => (
         <Divider />
         <ProductGrid>
           <li>
-            <Item>Item content1</Item>
+            <Item>
+              <ImageSection>
+              <Image
+                src="http://dummyimage.com/307x328.bmp/ff4444/ffffff"
+                alt="alt"
+              />
+              </ImageSection>
+              
+              <DetailsSection>
+                <ItemTitle>Item Title</ItemTitle>
+                <ItemDescription>Item Description</ItemDescription>
+                <ItemPrice>$87.68</ItemPrice>
+              </DetailsSection>
+            </Item>
           </li>
           <li>
             <Item>Item content2</Item>
