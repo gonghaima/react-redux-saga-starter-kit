@@ -42,12 +42,11 @@ export const Home = () => (
           <li>
             <Item>
               <ImageSection>
-              <Image
-                src="http://dummyimage.com/307x328.bmp/ff4444/ffffff"
-                alt="alt"
-              />
+                <Image
+                  src="http://dummyimage.com/307x328.bmp/ff4444/ffffff"
+                  alt="alt"
+                />
               </ImageSection>
-              
               <DetailsSection>
                 <ItemTitle>Item Title</ItemTitle>
                 <ItemDescription>Item Description</ItemDescription>
@@ -56,10 +55,34 @@ export const Home = () => (
             </Item>
           </li>
           <li>
-            <Item>Item content2</Item>
+            <Item>
+              <ImageSection>
+                <Image
+                  src="http://dummyimage.com/345x342.jpg/dddddd/000000"
+                  alt="alt"
+                />
+              </ImageSection>
+              <DetailsSection>
+                <ItemTitle>Item Title</ItemTitle>
+                <ItemDescription>Item Description</ItemDescription>
+                <ItemPrice>$87.68</ItemPrice>
+              </DetailsSection>
+            </Item>
           </li>
           <li>
-            <Item>Item content3</Item>
+            <Item>
+              <ImageSection>
+                <Image
+                  src="http://dummyimage.com/318x336.png/5fa2dd/ffffff"
+                  alt="alt"
+                />
+              </ImageSection>
+              <DetailsSection>
+                <ItemTitle>Item Title</ItemTitle>
+                <ItemDescription>Item Description</ItemDescription>
+                <ItemPrice>$87.68</ItemPrice>
+              </DetailsSection>
+            </Item>
           </li>
         </ProductGrid>
       </HomeWrapper>
