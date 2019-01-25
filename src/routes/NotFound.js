@@ -1,3 +1,20 @@
 import React from 'react';
-
-export const NotFound = () => <h2>Not found</h2>;
+import { Link } from 'react-router-dom';
+import {
+  Background,
+  Heading,
+  LinkText,
+  StyledContainer
+} from '../modules/styled/NotFound';
+export const NotFound = () => {
+  return (
+    <Background>
+      <StyledContainer>
+        <Heading>404</Heading>
+        <Link to="/">
+        <LinkText>go home</LinkText>
+      </Link>
+      </StyledContainer>
+    </Background>
+  );
+};
