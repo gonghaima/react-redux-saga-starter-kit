@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import ReactPaginate from 'react-paginate';
 import { connect } from 'react-redux';
-import { getProducts } from '../actions';
+import { getProducts, setPage, setSelection } from '../actions';
 
 import {
   DetailsSection,
@@ -22,76 +22,70 @@ import {
 } from '../modules/styled/Home';
 
 class Product extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSelect = this.handleSelect.bind(this);
+    this.handlePageChange = this.handlePageChange.bind(this);
+  }
+
+  handlePageChange(event) {
+    const { dispatch } = this.props;
+    const currentPage = Math.floor(event.selected);
+    dispatch(setPage(currentPage));
+  }
+  handleSelect(event) {
+    const { dispatch } = this.props;
+    dispatch(setSelection(event.target.value));
+  }
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(getProducts());
   }
   render() {
-    const { product } = this.props;
-    debugger;
+    const { product, selection } = this.props;
+    const pageCount =
+      selection && selection.itemPerPage
+        ? Math.ceil(product.data.length / selection.itemPerPage)
+        : 0;
     return (
       <Fragment>
-        <Title>Home</Title>
+        <Title>All Products</Title>
         <Summary>
           <SummaryItem>
-            <ProductCount>1000 Products</ProductCount>
+            <ProductCount>{product.data.length} Products</ProductCount>
           </SummaryItem>
           <SummaryItem>
-            <DisplayNumberSelect>
-              <option>4 per page</option>
-              <option>16 per page</option>
-              <option>32 per page</option>
-              <option>64 per page</option>
+            <DisplayNumberSelect onChange={this.handleSelect}>
+              {selection.selectionItems.map(val => (
+                <option key={val} value={val}>
+                  {val} per page
+                </option>
+              ))}
             </DisplayNumberSelect>
           </SummaryItem>
         </Summary>
         <Divider />
         <ProductGrid>
-          <li>
-            <Item>
-              <ImageSection>
-                <Image
-                  src="http://dummyimage.com/307x328.bmp/ff4444/ffffff"
-                  alt="alt"
-                />
-              </ImageSection>
-              <DetailsSection>
-                <ItemTitle>Item Title</ItemTitle>
-                <ItemDescription>Item Description</ItemDescription>
-                <ItemPrice>$87.68</ItemPrice>
-              </DetailsSection>
-            </Item>
-          </li>
-          <li>
-            <Item>
-              <ImageSection>
-                <Image
-                  src="http://dummyimage.com/345x342.jpg/dddddd/000000"
-                  alt="alt"
-                />
-              </ImageSection>
-              <DetailsSection>
-                <ItemTitle>Item Title</ItemTitle>
-                <ItemDescription>Item Description</ItemDescription>
-                <ItemPrice>$87.68</ItemPrice>
-              </DetailsSection>
-            </Item>
-          </li>
-          <li>
-            <Item>
-              <ImageSection>
-                <Image
-                  src="http://dummyimage.com/318x336.png/5fa2dd/ffffff"
-                  alt="alt"
-                />
-              </ImageSection>
-              <DetailsSection>
-                <ItemTitle>Item Title</ItemTitle>
-                <ItemDescription>Item Description</ItemDescription>
-                <ItemPrice>$87.68</ItemPrice>
-              </DetailsSection>
-            </Item>
-          </li>
+          {product.data
+            .slice(
+              selection.currentPage * selection.itemPerPage,
+              Number(selection.currentPage * selection.itemPerPage) +
+                Number(selection.itemPerPage)
+            )
+            .map(d => (
+              <li key={d.id}>
+                <Item>
+                  <ImageSection>
+                    <Image src={d.product_image} alt="alt" />
+                  </ImageSection>
+                  <DetailsSection>
+                    <ItemTitle>{d.product_name}</ItemTitle>
+                    <ItemDescription>{d.description}</ItemDescription>
+                    <ItemPrice>{d.price}</ItemPrice>
+                  </DetailsSection>
+                </Item>
+              </li>
+            ))}
         </ProductGrid>
         <Pagination>
           <ReactPaginate
@@ -99,10 +93,10 @@ class Product extends Component {
             nextLabel={'next page >'}
             breakLabel="..."
             breakClassName="break-me"
-            pageCount={88}
+            pageCount={pageCount}
             marginPagesDisplayed={2}
             pageRangeDisplayed={5}
-            onPageChange={() => {}}
+            onPageChange={this.handlePageChange}
             containerClassName="pagination"
             subContainerClassName="pages pagination"
             activeClassName="active"
@@ -114,7 +108,7 @@ class Product extends Component {
 }
 
 function mapStateToProps(state) {
-  return { product: state.product };
+  return { product: state.product, selection: state.selection };
 }
 
 export default connect(mapStateToProps)(Product);

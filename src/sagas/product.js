@@ -13,7 +13,7 @@ export function* getProducts() {
     });
   } catch (err) {
     yield put({
-      type: ActionTypes.PRODUCT_GET_REPOS_FAILURE,
+      type: ActionTypes.PRODUCT_GET_FAILURE,
       payload: err
     });
   }

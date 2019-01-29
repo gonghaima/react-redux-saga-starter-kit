@@ -4,7 +4,9 @@ const ActionTypes = keyMirror({
   EXCEPTION: undefined,
   GET_PRODUCTS: undefined,
   PRODUCT_GET_SUCCESS: undefined,
-  PRODUCT_GET_REPOS_FAILURE: undefined
+  PRODUCT_GET_FAILURE: undefined,
+  SELECTION_CHANGE: undefined,
+  PAGE_CHANGE: undefined
 });
 
 const STATUS = {
