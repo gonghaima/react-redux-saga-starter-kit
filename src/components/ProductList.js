@@ -10,29 +10,24 @@ import {
   ItemTitle,
   ProductGrid
 } from '../modules/styled/Home';
+import { currentProducts } from '../modules/helpers';
 
 const ProductList = ({ product, selection }) => (
   <ProductGrid>
-    {product.data
-      .slice(
-        selection.currentPage * selection.itemPerPage,
-        Number(selection.currentPage * selection.itemPerPage) +
-          Number(selection.itemPerPage)
-      )
-      .map(d => (
-        <li key={d.id}>
-          <Item>
-            <ImageSection>
-              <Image src={d.product_image} alt="alt" />
-            </ImageSection>
-            <DetailsSection>
-              <ItemTitle>{d.product_name}</ItemTitle>
-              <ItemDescription>{d.description}</ItemDescription>
-              <ItemPrice>{d.price}</ItemPrice>
-            </DetailsSection>
-          </Item>
-        </li>
-      ))}
+    {currentProducts(product, selection).map(d => (
+      <li key={d.id}>
+        <Item>
+          <ImageSection>
+            <Image src={d.product_image} alt="alt" />
+          </ImageSection>
+          <DetailsSection>
+            <ItemTitle>{d.product_name}</ItemTitle>
+            <ItemDescription>{d.description}</ItemDescription>
+            <ItemPrice>{d.price}</ItemPrice>
+          </DetailsSection>
+        </Item>
+      </li>
+    ))}
   </ProductGrid>
 );
 
