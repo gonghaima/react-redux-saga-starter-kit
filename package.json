@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cypress-testing-library": "^2.3.5",
+    "eslint-plugin-cypress": "^2.2.0",
     "fbjs": "^1.0.0",
     "immutability-helper": "^3.0.0",
     "react": "^16.7.0",
@@ -23,6 +25,8 @@
     "start": "PORT=8080 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --record --key adbe5dd9-10e2-42aa-b679-da6d31ae5d51",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -33,5 +37,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "cypress": "^3.1.4"
+  }
 }
