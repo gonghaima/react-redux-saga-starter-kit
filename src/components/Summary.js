@@ -14,7 +14,10 @@ const SummaryComponent = ({ handleSelect, items, total }) => {
         <ProductCount>{total} Products</ProductCount>
       </SummaryItem>
       <SummaryItem>
-        <DisplayNumberSelect onChange={handleSelect}>
+        <DisplayNumberSelect
+          onChange={handleSelect}
+          data-testid="DisplayNumberSelect"
+        >
           {items.map(val => (
             <option key={val} value={val}>
               {val} per page
