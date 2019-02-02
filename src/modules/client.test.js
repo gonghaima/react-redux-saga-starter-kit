@@ -1,14 +1,36 @@
 import { request } from '../modules/client';
 
 describe('client', () => {
-  const mockFetch = url => {
+  const mockFetchJSON = url => {
     return new Promise(resolve => {
-      resolve({ text: () => 'api data', headers: { get: key => '' } });
+      resolve({
+        json: () => 'api json data',
+        headers: { get: key => 'application/json' }
+      });
     });
   };
-  it('call fetch function, and return resolved data', async () => {
-    const result = await request('validURL', mockFetch);
+  const mockFetchText = url => {
+    return new Promise(resolve => {
+      resolve({ text: () => 'api text data', headers: { get: key => '' } });
+    });
+  };
+  const mockFetchError = url => {
+    return new Promise((resolve, reject) => {
+      reject('unexpected error data');
+    });
+  };
+  it('call fetch function, and return resolved text data', async () => {
+    const result = await request('validURL', mockFetchText);
+    expect(result).toBe('api text data');
+  });
 
-    expect(result).toBe('api data');
+  it('call fetch function, and return resolved json data', async () => {
+    const result = await request('validURL', mockFetchJSON);
+    expect(result).toBe('api json data');
+  });
+
+  it('call fetch function, and return resolved json data', async () => {
+    const result = await request('invalidURL', mockFetchError);
+    expect(result).toBe('unexpected error data');
   });
 });

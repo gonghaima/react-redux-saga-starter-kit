@@ -5,7 +5,6 @@ const request = (url, func) => {
       if (contentType && contentType.includes('application/json')) {
         return response.json();
       }
-
       return response.text();
     })
     .catch(err => err);
