@@ -21,25 +21,8 @@ function setup(ownProps = props) {
 
 describe('Product', () => {
   const wrapper = setup();
+  wrapper.setProps({ dispatch: mockDispatch });
   it('should render properly', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('should have dispatched an action on mount', () => {
-    // expect(mockDispatch).toHaveBeenCalledWith({
-    //   type: 'GET_PRODUCTS'
-    // });
-    // expect(mockDispatch).toHaveBeenCalled();
-  });
 });
-
-// describe('Product', () => {
-//   const wrapper = setup();
-//   it('should render properly', () => {
-//     expect(wrapper).toMatchSnapshot();
-//   });
-// });
-
-// it('renders without crashing', () => {
-//   shallow(<App />);
-// });

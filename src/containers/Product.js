@@ -17,17 +17,13 @@ class Product extends Component {
   }
 
   handlePageChange(event) {
-    const { dispatch } = this.props;
-    const currentPage = Math.floor(event.selected);
-    dispatch(setPage(currentPage));
+    this.props.dispatch(setPage(Math.floor(event.selected)));
   }
   handleSelect(event) {
-    const { dispatch } = this.props;
-    dispatch(setSelection(event.target.value));
+    this.props.dispatch(setSelection(event.target.value));
   }
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(getProducts());
+    this.props.dispatch(getProducts());
   }
   render() {
     const { product, selection } = this.props;
