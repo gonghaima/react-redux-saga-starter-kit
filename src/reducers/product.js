@@ -14,13 +14,12 @@ export default {
   product: handleActions(
     {
       [ActionTypes.GET_PRODUCTS]: (state, { payload }) => {
-        const data = state.data[payload.query] ? state.data[payload.query] : [];
+        const data = [];
         return immutable(state, {
           data: {
             $set: data
           },
           message: { $set: '' },
-          query: { $set: payload.query },
           status: { $set: STATUS.RUNNING }
         });
       },

@@ -1,104 +1,1211 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product should render properly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Product)
-    dispatch={[MockFunction]}
+exports[`Product should trigger dispatch on pagination change 1`] = `
+<Product
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "payload": Object {
+              "query": undefined,
+            },
+            "type": "GET_PRODUCTS",
+          },
+        ],
+        Array [
+          Object {
+            "payload": Object {
+              "query": undefined,
+            },
+            "type": "GET_PRODUCTS",
+          },
+        ],
+        Array [
+          Object {
+            "payload": Object {
+              "selectedValue": "4",
+            },
+            "type": "SELECTION_CHANGE",
+          },
+        ],
+        Array [
+          Object {
+            "payload": Object {
+              "query": undefined,
+            },
+            "type": "GET_PRODUCTS",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  product={
+    Object {
+      "data": Array [],
+    }
+  }
+  selection={
+    Object {
+      "selectionItems": Array [
+        4,
+        8,
+        10,
+        20,
+        40,
+      ],
+    }
+  }
+>
+  <styled.h2>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-fjdhpX",
+            "isStatic": true,
+            "lastClassName": "cdcqNy",
+            "rules": Array [
+              "
+  margin: 0;
+  color: ",
+              "#6A6A6A",
+              ";
+",
+            ],
+          },
+          "displayName": "styled.h2",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-fjdhpX",
+          "target": "h2",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <h2
+        className="sc-fjdhpX cdcqNy"
+      >
+        All Products
+      </h2>
+    </StyledComponent>
+  </styled.h2>
+  <SummaryComponent
+    handleSelect={[Function]}
+    items={
+      Array [
+        4,
+        8,
+        10,
+        20,
+        40,
+      ]
+    }
+    total={0}
+  >
+    <styled.div>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-jzJRlG",
+              "isStatic": true,
+              "lastClassName": "iFJkVb",
+              "rules": Array [
+                "
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0;
+  color: ",
+                "#BFBFBF",
+                ";
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-jzJRlG",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <div
+          className="sc-jzJRlG iFJkVb"
+        >
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-cSHVUG",
+                    "isStatic": true,
+                    "lastClassName": "gwzott",
+                    "rules": Array [
+                      "
+  margin: 0;
+  width: 10%;
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-cSHVUG",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-cSHVUG gwzott"
+              >
+                <styled.span>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-gqjmRU",
+                          "isStatic": true,
+                          "lastClassName": "lhgjrU",
+                          "rules": Array [
+                            "
+  vertical-align: sub;
+",
+                          ],
+                        },
+                        "displayName": "styled.span",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-gqjmRU",
+                        "target": "span",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <span
+                      className="sc-gqjmRU lhgjrU"
+                    >
+                      0
+                       Products
+                    </span>
+                  </StyledComponent>
+                </styled.span>
+              </div>
+            </StyledComponent>
+          </styled.div>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-cSHVUG",
+                    "isStatic": true,
+                    "lastClassName": "gwzott",
+                    "rules": Array [
+                      "
+  margin: 0;
+  width: 10%;
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-cSHVUG",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-cSHVUG gwzott"
+              >
+                <styled.select
+                  data-testid="DisplayNumberSelect"
+                  onChange={[Function]}
+                >
+                  <StyledComponent
+                    data-testid="DisplayNumberSelect"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": true,
+                          "lastClassName": "ibmCTf",
+                          "rules": Array [
+                            "
+  color: ",
+                            "#7a7a7a",
+                            ";
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 2px;
+  display: block;
+  height: 28px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1;
+  padding: 6px;
+  white-space: nowrap;
+  width: 100%;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  margin: 0em;
+  box-sizing: border-box;
+",
+                          ],
+                        },
+                        "displayName": "styled.select",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "select",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onChange={[Function]}
+                  >
+                    <select
+                      className="sc-htpNat ibmCTf"
+                      data-testid="DisplayNumberSelect"
+                      onChange={[Function]}
+                    >
+                      <option
+                        key="4"
+                        value={4}
+                      >
+                        4
+                         per page
+                      </option>
+                      <option
+                        key="8"
+                        value={8}
+                      >
+                        8
+                         per page
+                      </option>
+                      <option
+                        key="10"
+                        value={10}
+                      >
+                        10
+                         per page
+                      </option>
+                      <option
+                        key="20"
+                        value={20}
+                      >
+                        20
+                         per page
+                      </option>
+                      <option
+                        key="40"
+                        value={40}
+                      >
+                        40
+                         per page
+                      </option>
+                    </select>
+                  </StyledComponent>
+                </styled.select>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </SummaryComponent>
+  <styled.hr>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bxivhb",
+            "isStatic": true,
+            "lastClassName": "fBfFvt",
+            "rules": Array [
+              "
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid ",
+              "#E5E5E5",
+              ";
+  margin: 0.7em 0.4em;
+  padding: 0;
+",
+            ],
+          },
+          "displayName": "styled.hr",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bxivhb",
+          "target": "hr",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <hr
+        className="sc-bxivhb fBfFvt"
+      />
+    </StyledComponent>
+  </styled.hr>
+  <ProductList
     product={
       Object {
         "data": Array [],
       }
     }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "children": [Function],
-    },
-    "ref": null,
-    "rendered": [Function],
-    "type": Object {
-      "$$typeof": Symbol(react.context),
-      "_calculateChangedBits": null,
-      "_context": Object {
-        "$$typeof": Symbol(react.context),
-        "Consumer": [Circular],
-        "Provider": Object {
-          "$$typeof": Symbol(react.provider),
-          "_context": [Circular],
+    selection={
+      Object {
+        "selectionItems": Array [
+          4,
+          8,
+          10,
+          20,
+          40,
+        ],
+      }
+    }
+  >
+    <styled.ul>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-VigVT",
+              "isStatic": false,
+              "lastClassName": "igVpww",
+              "rules": Array [
+                "
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: ",
+                "8px",
+                ";
+  grid-template-columns: 100%;
+  list-style: none;
+  margin: 0px ",
+                "32px",
+                " auto 0;
+  padding: 0;
+  /* stylelint-disable */
+  ",
+                [Function],
+                ";
+  /* stylelint-enable */
+
+  > li {
+    display: flex;
+  }
+",
+              ],
+            },
+            "displayName": "styled.ul",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-VigVT",
+            "target": "ul",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <ul
+          className="sc-VigVT igVpww"
+        />
+      </StyledComponent>
+    </styled.ul>
+  </ProductList>
+  <PaginationComponent
+    handlePageChange={[Function]}
+    pageCount={0}
+  >
+    <styled.div>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-gZMcBi",
+              "isStatic": true,
+              "lastClassName": "byQgsA",
+              "rules": Array [
+                "
+  display: flex;
+  flex-direction: row-reverse;
+  ul {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  li {
+    display: inline-block;
+  }
+  a {
+    z-index: 3;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    text-decoration: none;
+  }
+  .active a:hover,
+  .active a {
+    background: #fff;
+    outline: unset;
+    border-bottom: 3px solid ",
+                "#272727",
+                ";
+  }
+  .disabled a {
+    color: ",
+                "#BFBFBF",
+                ";
+    cursor: not-allowed;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-gZMcBi",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <div
+          className="sc-gZMcBi byQgsA"
+        >
+          <PaginationBoxView
+            activeClassName="active"
+            breakClassName="break-me"
+            breakLabel="..."
+            containerClassName="pagination"
+            disableInitialCallback={false}
+            disabledClassName="disabled"
+            marginPagesDisplayed={2}
+            nextClassName="next"
+            nextLabel="next page >"
+            onPageChange={[Function]}
+            pageCount={0}
+            pageRangeDisplayed={5}
+            previousClassName="previous"
+            previousLabel="< previous page"
+            subContainerClassName="pages pagination"
+          >
+            <ul
+              className="pagination"
+            >
+              <li
+                className="previous disabled"
+              >
+                <a
+                  aria-disabled="true"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex="0"
+                >
+                  &lt; previous page
+                </a>
+              </li>
+              <li
+                className="next"
+              >
+                <a
+                  aria-disabled="false"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex="0"
+                >
+                  next page &gt;
+                </a>
+              </li>
+            </ul>
+          </PaginationBoxView>
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </PaginationComponent>
+</Product>
+`;
+
+exports[`Product should trigger dispatch on selection change 1`] = `
+<Product
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "payload": Object {
+              "query": undefined,
+            },
+            "type": "GET_PRODUCTS",
+          },
+        ],
+        Array [
+          Object {
+            "payload": Object {
+              "query": undefined,
+            },
+            "type": "GET_PRODUCTS",
+          },
+        ],
+        Array [
+          Object {
+            "payload": Object {
+              "selectedValue": "4",
+            },
+            "type": "SELECTION_CHANGE",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
         },
-        "_calculateChangedBits": null,
-        "_currentRenderer": null,
-        "_currentRenderer2": null,
-        "_currentValue": null,
-        "_currentValue2": null,
-        "_threadCount": 0,
-      },
-    },
-  },
-  Symbol(enzyme.__nodes__): Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  product={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": [Function],
-      },
-      "ref": null,
-      "rendered": [Function],
-      "type": Object {
-        "$$typeof": Symbol(react.context),
-        "_calculateChangedBits": null,
-        "_context": Object {
-          "$$typeof": Symbol(react.context),
-          "Consumer": [Circular],
-          "Provider": Object {
-            "$$typeof": Symbol(react.provider),
-            "_context": [Circular],
+      "data": Array [],
+    }
+  }
+  selection={
+    Object {
+      "selectionItems": Array [
+        4,
+        8,
+        10,
+        20,
+        40,
+      ],
+    }
+  }
+>
+  <styled.h2>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-fjdhpX",
+            "isStatic": true,
+            "lastClassName": "cdcqNy",
+            "rules": Array [
+              "
+  margin: 0;
+  color: ",
+              "#6A6A6A",
+              ";
+",
+            ],
           },
-          "_calculateChangedBits": null,
-          "_currentRenderer": null,
-          "_currentRenderer2": null,
-          "_currentValue": null,
-          "_currentValue2": null,
-          "_threadCount": 0,
-        },
-      },
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
+          "displayName": "styled.h2",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-fjdhpX",
+          "target": "h2",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <h2
+        className="sc-fjdhpX cdcqNy"
+      >
+        All Products
+      </h2>
+    </StyledComponent>
+  </styled.h2>
+  <SummaryComponent
+    handleSelect={[Function]}
+    items={
+      Array [
+        4,
+        8,
+        10,
+        20,
+        40,
+      ]
+    }
+    total={0}
+  >
+    <styled.div>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-jzJRlG",
+              "isStatic": true,
+              "lastClassName": "iFJkVb",
+              "rules": Array [
+                "
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0;
+  color: ",
+                "#BFBFBF",
+                ";
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-jzJRlG",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <div
+          className="sc-jzJRlG iFJkVb"
+        >
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-cSHVUG",
+                    "isStatic": true,
+                    "lastClassName": "gwzott",
+                    "rules": Array [
+                      "
+  margin: 0;
+  width: 10%;
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-cSHVUG",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-cSHVUG gwzott"
+              >
+                <styled.span>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-gqjmRU",
+                          "isStatic": true,
+                          "lastClassName": "lhgjrU",
+                          "rules": Array [
+                            "
+  vertical-align: sub;
+",
+                          ],
+                        },
+                        "displayName": "styled.span",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-gqjmRU",
+                        "target": "span",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <span
+                      className="sc-gqjmRU lhgjrU"
+                    >
+                      0
+                       Products
+                    </span>
+                  </StyledComponent>
+                </styled.span>
+              </div>
+            </StyledComponent>
+          </styled.div>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-cSHVUG",
+                    "isStatic": true,
+                    "lastClassName": "gwzott",
+                    "rules": Array [
+                      "
+  margin: 0;
+  width: 10%;
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-cSHVUG",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-cSHVUG gwzott"
+              >
+                <styled.select
+                  data-testid="DisplayNumberSelect"
+                  onChange={[Function]}
+                >
+                  <StyledComponent
+                    data-testid="DisplayNumberSelect"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-htpNat",
+                          "isStatic": true,
+                          "lastClassName": "ibmCTf",
+                          "rules": Array [
+                            "
+  color: ",
+                            "#7a7a7a",
+                            ";
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 2px;
+  display: block;
+  height: 28px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1;
+  padding: 6px;
+  white-space: nowrap;
+  width: 100%;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  margin: 0em;
+  box-sizing: border-box;
+",
+                          ],
+                        },
+                        "displayName": "styled.select",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-htpNat",
+                        "target": "select",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onChange={[Function]}
+                  >
+                    <select
+                      className="sc-htpNat ibmCTf"
+                      data-testid="DisplayNumberSelect"
+                      onChange={[Function]}
+                    >
+                      <option
+                        key="4"
+                        value={4}
+                      >
+                        4
+                         per page
+                      </option>
+                      <option
+                        key="8"
+                        value={8}
+                      >
+                        8
+                         per page
+                      </option>
+                      <option
+                        key="10"
+                        value={10}
+                      >
+                        10
+                         per page
+                      </option>
+                      <option
+                        key="20"
+                        value={20}
+                      >
+                        20
+                         per page
+                      </option>
+                      <option
+                        key="40"
+                        value={40}
+                      >
+                        40
+                         per page
+                      </option>
+                    </select>
+                  </StyledComponent>
+                </styled.select>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </SummaryComponent>
+  <styled.hr>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bxivhb",
+            "isStatic": true,
+            "lastClassName": "fBfFvt",
+            "rules": Array [
+              "
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid ",
+              "#E5E5E5",
+              ";
+  margin: 0.7em 0.4em;
+  padding: 0;
+",
+            ],
           },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    "attachTo": null,
-  },
-}
+          "displayName": "styled.hr",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bxivhb",
+          "target": "hr",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <hr
+        className="sc-bxivhb fBfFvt"
+      />
+    </StyledComponent>
+  </styled.hr>
+  <ProductList
+    product={
+      Object {
+        "data": Array [],
+      }
+    }
+    selection={
+      Object {
+        "selectionItems": Array [
+          4,
+          8,
+          10,
+          20,
+          40,
+        ],
+      }
+    }
+  >
+    <styled.ul>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-VigVT",
+              "isStatic": false,
+              "lastClassName": "igVpww",
+              "rules": Array [
+                "
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: ",
+                "8px",
+                ";
+  grid-template-columns: 100%;
+  list-style: none;
+  margin: 0px ",
+                "32px",
+                " auto 0;
+  padding: 0;
+  /* stylelint-disable */
+  ",
+                [Function],
+                ";
+  /* stylelint-enable */
+
+  > li {
+    display: flex;
+  }
+",
+              ],
+            },
+            "displayName": "styled.ul",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-VigVT",
+            "target": "ul",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <ul
+          className="sc-VigVT igVpww"
+        />
+      </StyledComponent>
+    </styled.ul>
+  </ProductList>
+  <PaginationComponent
+    handlePageChange={[Function]}
+    pageCount={0}
+  >
+    <styled.div>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-gZMcBi",
+              "isStatic": true,
+              "lastClassName": "byQgsA",
+              "rules": Array [
+                "
+  display: flex;
+  flex-direction: row-reverse;
+  ul {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  li {
+    display: inline-block;
+  }
+  a {
+    z-index: 3;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    text-decoration: none;
+  }
+  .active a:hover,
+  .active a {
+    background: #fff;
+    outline: unset;
+    border-bottom: 3px solid ",
+                "#272727",
+                ";
+  }
+  .disabled a {
+    color: ",
+                "#BFBFBF",
+                ";
+    cursor: not-allowed;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-gZMcBi",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <div
+          className="sc-gZMcBi byQgsA"
+        >
+          <PaginationBoxView
+            activeClassName="active"
+            breakClassName="break-me"
+            breakLabel="..."
+            containerClassName="pagination"
+            disableInitialCallback={false}
+            disabledClassName="disabled"
+            marginPagesDisplayed={2}
+            nextClassName="next"
+            nextLabel="next page >"
+            onPageChange={[Function]}
+            pageCount={0}
+            pageRangeDisplayed={5}
+            previousClassName="previous"
+            previousLabel="< previous page"
+            subContainerClassName="pages pagination"
+          >
+            <ul
+              className="pagination"
+            >
+              <li
+                className="previous disabled"
+              >
+                <a
+                  aria-disabled="true"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex="0"
+                >
+                  &lt; previous page
+                </a>
+              </li>
+              <li
+                className="next"
+              >
+                <a
+                  aria-disabled="false"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex="0"
+                >
+                  next page &gt;
+                </a>
+              </li>
+            </ul>
+          </PaginationBoxView>
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </PaginationComponent>
+</Product>
+`;
+
+exports[`ProductContainer should render properly 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

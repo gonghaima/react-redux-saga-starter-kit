@@ -24,10 +24,10 @@ const createMediaQuery = function createMediaQuery(n, breakpoints) {
 
   return grid[n] || '@media (min-width: '.concat(n, ')');
 };
-const responsive = (input, queryBuilderFn) => {
+const responsive = input => {
   return props => {
     const rules = typeof input === 'function' ? input(props) : input;
-    var queryBuilder = queryBuilderFn || createMediaQuery;
+    var queryBuilder = createMediaQuery;
     let result = [];
     for (const rule in rules) {
       if ({}.hasOwnProperty.call(rules, rule)) {
@@ -42,4 +42,4 @@ const responsive = (input, queryBuilderFn) => {
   };
 };
 
-export { createMediaQuery, responsive };
+export { createMediaQuery, isNumber, px, responsive };

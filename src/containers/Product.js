@@ -9,7 +9,7 @@ import Pagination from '../components/Pagination';
 
 import { Divider, Title } from '../modules/styled/Home';
 
-class Product extends Component {
+export class Product extends Component {
   constructor(props) {
     super(props);
     this.handleSelect = this.handleSelect.bind(this);

@@ -171,7 +171,7 @@ const ProductGrid = styled.ul`
   margin: 0px ${theme.spacer[4]} auto 0;
   padding: 0;
   /* stylelint-disable */
-  ${/* istanbul ignore next */ p =>
+  ${p =>
     responsive({
       ix: `
         grid-gap: ${theme.spacer[3]};
