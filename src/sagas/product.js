@@ -3,10 +3,13 @@ import { request } from '../modules/client';
 import { ActionTypes } from '../constants';
 import mockedProductData from '../mocks/productData';
 
-export function* getProducts() {
+export function* getProducts(indicator) {
   try {
-    // const response = yield call(request, '/api/product');
-    const response = { data: mockedProductData };
+    if (indicator && indicator === 'error') throw new Error('unexpected event');
+    const response =
+      process.env.REACT_APP_ENV && process.env.REACT_APP_ENV === 'integration'
+        ? yield call(request, '/api/product')
+        : { data: mockedProductData };
     yield put({
       type: ActionTypes.PRODUCT_GET_SUCCESS,
       payload: { data: (response && response.data) || [] }

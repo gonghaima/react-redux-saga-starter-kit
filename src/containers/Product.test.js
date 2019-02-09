@@ -1,9 +1,6 @@
 import React from 'react';
 import { shallow, render, mount } from 'enzyme';
-import { STATUS } from '../constants/index';
 import ProductContainer, { Product } from './Product';
-import ReactDOM from 'react-dom';
-import App from '../App';
 
 const mockDispatch = jest.fn();
 
