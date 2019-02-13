@@ -157,6 +157,17 @@ const Pagination = styled.div`
     color: ${theme.palette.subTitleColor};
     cursor: not-allowed;
   }
+  /* stylelint-disable */
+  ${p =>
+    responsive({
+      ix: `
+        font-size: 10px
+      `,
+      md: `
+        font-size: 16px
+      `
+    })};
+  /* stylelint-enable */
 `;
 
 const ProductCount = styled.span`
