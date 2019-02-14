@@ -160,6 +160,9 @@ const Pagination = styled.div`
   /* stylelint-disable */
   ${p =>
     responsive({
+      'ix-only': `
+        font-size: 10px
+      `,
       ix: `
         font-size: 10px
       `,
