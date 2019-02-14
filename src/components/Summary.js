@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  DisplayNumberSelect,
-  Summary,
-  SummaryItem,
-  ProductCount
-} from '../modules/styled/Home';
+import NumberPerPage from './NumberPerPage';
+import { Summary, SummaryItem, ProductCount } from '../modules/styled/Home';
 
 const SummaryComponent = ({ handleSelect, items, total }) => {
   return (
@@ -14,16 +10,11 @@ const SummaryComponent = ({ handleSelect, items, total }) => {
         <ProductCount>{total} Products</ProductCount>
       </SummaryItem>
       <SummaryItem>
-        <DisplayNumberSelect
-          onChange={handleSelect}
-          data-testid="DisplayNumberSelect"
-        >
-          {items.map(val => (
-            <option key={val} value={val}>
-              {val} per page
-            </option>
-          ))}
-        </DisplayNumberSelect>
+        <NumberPerPage
+          handleSelect={handleSelect}
+          dataTestid="DisplayNumberSelect"
+          items={items}
+        />
       </SummaryItem>
     </Summary>
   );
