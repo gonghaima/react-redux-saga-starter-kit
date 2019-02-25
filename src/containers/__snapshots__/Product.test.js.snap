@@ -267,25 +267,47 @@ exports[`Product should trigger dispatch on pagination change 1`] = `
               <div
                 className="sc-cSHVUG gwzott"
               >
-                <styled.select
-                  data-testid="DisplayNumberSelect"
-                  onChange={[Function]}
+                <_default
+                  dataTestid="DisplayNumberSelect"
+                  handleSelect={[Function]}
+                  items={
+                    Array [
+                      4,
+                      8,
+                      10,
+                      20,
+                      40,
+                    ]
+                  }
                 >
-                  <StyledComponent
+                  <styled.select
                     data-testid="DisplayNumberSelect"
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "sc-htpNat",
-                          "isStatic": true,
-                          "lastClassName": "ibmCTf",
-                          "rules": Array [
-                            "
+                    items={
+                      Array [
+                        4,
+                        8,
+                        10,
+                        20,
+                        40,
+                      ]
+                    }
+                    onChange={[Function]}
+                  >
+                    <StyledComponent
+                      data-testid="DisplayNumberSelect"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-htpNat",
+                            "isStatic": true,
+                            "lastClassName": "ibmCTf",
+                            "rules": Array [
+                              "
   color: ",
-                            "#7a7a7a",
-                            ";
+                              "#7a7a7a",
+                              ";
   box-sizing: border-box;
   border: 0;
   border-radius: 2px;
@@ -307,64 +329,74 @@ exports[`Product should trigger dispatch on pagination change 1`] = `
   margin: 0em;
   box-sizing: border-box;
 ",
-                          ],
-                        },
-                        "displayName": "styled.select",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "sc-htpNat",
-                        "target": "select",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
+                            ],
+                          },
+                          "displayName": "styled.select",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-htpNat",
+                          "target": "select",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
                       }
-                    }
-                    forwardedRef={null}
-                    onChange={[Function]}
-                  >
-                    <select
-                      className="sc-htpNat ibmCTf"
-                      data-testid="DisplayNumberSelect"
+                      forwardedRef={null}
+                      items={
+                        Array [
+                          4,
+                          8,
+                          10,
+                          20,
+                          40,
+                        ]
+                      }
                       onChange={[Function]}
                     >
-                      <option
-                        key="4"
-                        value={4}
+                      <select
+                        className="sc-htpNat ibmCTf"
+                        data-testid="DisplayNumberSelect"
+                        onChange={[Function]}
                       >
-                        4
-                         per page
-                      </option>
-                      <option
-                        key="8"
-                        value={8}
-                      >
-                        8
-                         per page
-                      </option>
-                      <option
-                        key="10"
-                        value={10}
-                      >
-                        10
-                         per page
-                      </option>
-                      <option
-                        key="20"
-                        value={20}
-                      >
-                        20
-                         per page
-                      </option>
-                      <option
-                        key="40"
-                        value={40}
-                      >
-                        40
-                         per page
-                      </option>
-                    </select>
-                  </StyledComponent>
-                </styled.select>
+                        <option
+                          key="4"
+                          value={4}
+                        >
+                          4
+                           per page
+                        </option>
+                        <option
+                          key="8"
+                          value={8}
+                        >
+                          8
+                           per page
+                        </option>
+                        <option
+                          key="10"
+                          value={10}
+                        >
+                          10
+                           per page
+                        </option>
+                        <option
+                          key="20"
+                          value={20}
+                        >
+                          20
+                           per page
+                        </option>
+                        <option
+                          key="40"
+                          value={40}
+                        >
+                          40
+                           per page
+                        </option>
+                      </select>
+                    </StyledComponent>
+                  </styled.select>
+                </_default>
               </div>
             </StyledComponent>
           </styled.div>
@@ -495,8 +527,8 @@ exports[`Product should trigger dispatch on pagination change 1`] = `
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-gZMcBi",
-              "isStatic": true,
-              "lastClassName": "byQgsA",
+              "isStatic": false,
+              "lastClassName": "eFdXZI",
               "rules": Array [
                 "
   display: flex;
@@ -535,6 +567,11 @@ exports[`Product should trigger dispatch on pagination change 1`] = `
                 ";
     cursor: not-allowed;
   }
+  /* stylelint-disable */
+  ",
+                [Function],
+                ";
+  /* stylelint-enable */
 ",
               ],
             },
@@ -551,7 +588,7 @@ exports[`Product should trigger dispatch on pagination change 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-gZMcBi byQgsA"
+          className="sc-gZMcBi eFdXZI"
         >
           <PaginationBoxView
             activeClassName="active"
@@ -863,25 +900,47 @@ exports[`Product should trigger dispatch on selection change 1`] = `
               <div
                 className="sc-cSHVUG gwzott"
               >
-                <styled.select
-                  data-testid="DisplayNumberSelect"
-                  onChange={[Function]}
+                <_default
+                  dataTestid="DisplayNumberSelect"
+                  handleSelect={[Function]}
+                  items={
+                    Array [
+                      4,
+                      8,
+                      10,
+                      20,
+                      40,
+                    ]
+                  }
                 >
-                  <StyledComponent
+                  <styled.select
                     data-testid="DisplayNumberSelect"
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "sc-htpNat",
-                          "isStatic": true,
-                          "lastClassName": "ibmCTf",
-                          "rules": Array [
-                            "
+                    items={
+                      Array [
+                        4,
+                        8,
+                        10,
+                        20,
+                        40,
+                      ]
+                    }
+                    onChange={[Function]}
+                  >
+                    <StyledComponent
+                      data-testid="DisplayNumberSelect"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-htpNat",
+                            "isStatic": true,
+                            "lastClassName": "ibmCTf",
+                            "rules": Array [
+                              "
   color: ",
-                            "#7a7a7a",
-                            ";
+                              "#7a7a7a",
+                              ";
   box-sizing: border-box;
   border: 0;
   border-radius: 2px;
@@ -903,64 +962,74 @@ exports[`Product should trigger dispatch on selection change 1`] = `
   margin: 0em;
   box-sizing: border-box;
 ",
-                          ],
-                        },
-                        "displayName": "styled.select",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "sc-htpNat",
-                        "target": "select",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
+                            ],
+                          },
+                          "displayName": "styled.select",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-htpNat",
+                          "target": "select",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
                       }
-                    }
-                    forwardedRef={null}
-                    onChange={[Function]}
-                  >
-                    <select
-                      className="sc-htpNat ibmCTf"
-                      data-testid="DisplayNumberSelect"
+                      forwardedRef={null}
+                      items={
+                        Array [
+                          4,
+                          8,
+                          10,
+                          20,
+                          40,
+                        ]
+                      }
                       onChange={[Function]}
                     >
-                      <option
-                        key="4"
-                        value={4}
+                      <select
+                        className="sc-htpNat ibmCTf"
+                        data-testid="DisplayNumberSelect"
+                        onChange={[Function]}
                       >
-                        4
-                         per page
-                      </option>
-                      <option
-                        key="8"
-                        value={8}
-                      >
-                        8
-                         per page
-                      </option>
-                      <option
-                        key="10"
-                        value={10}
-                      >
-                        10
-                         per page
-                      </option>
-                      <option
-                        key="20"
-                        value={20}
-                      >
-                        20
-                         per page
-                      </option>
-                      <option
-                        key="40"
-                        value={40}
-                      >
-                        40
-                         per page
-                      </option>
-                    </select>
-                  </StyledComponent>
-                </styled.select>
+                        <option
+                          key="4"
+                          value={4}
+                        >
+                          4
+                           per page
+                        </option>
+                        <option
+                          key="8"
+                          value={8}
+                        >
+                          8
+                           per page
+                        </option>
+                        <option
+                          key="10"
+                          value={10}
+                        >
+                          10
+                           per page
+                        </option>
+                        <option
+                          key="20"
+                          value={20}
+                        >
+                          20
+                           per page
+                        </option>
+                        <option
+                          key="40"
+                          value={40}
+                        >
+                          40
+                           per page
+                        </option>
+                      </select>
+                    </StyledComponent>
+                  </styled.select>
+                </_default>
               </div>
             </StyledComponent>
           </styled.div>
@@ -1091,8 +1160,8 @@ exports[`Product should trigger dispatch on selection change 1`] = `
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-gZMcBi",
-              "isStatic": true,
-              "lastClassName": "byQgsA",
+              "isStatic": false,
+              "lastClassName": "eFdXZI",
               "rules": Array [
                 "
   display: flex;
@@ -1131,6 +1200,11 @@ exports[`Product should trigger dispatch on selection change 1`] = `
                 ";
     cursor: not-allowed;
   }
+  /* stylelint-disable */
+  ",
+                [Function],
+                ";
+  /* stylelint-enable */
 ",
               ],
             },
@@ -1147,7 +1221,7 @@ exports[`Product should trigger dispatch on selection change 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-gZMcBi byQgsA"
+          className="sc-gZMcBi eFdXZI"
         >
           <PaginationBoxView
             activeClassName="active"
