@@ -79,6 +79,19 @@ const Divider = styled.hr`
 `;
 const HomeWrapper = styled.div`
   color: ${theme.palette.titleColor};
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  ${p =>
+    responsive({
+      ix: `
+        margin-top:70px;
+      `,
+      md: `
+        margin-top:35px;
+      `
+    })};
+  /* stylelint-enable */
 `;
 
 const Image = styled.img`

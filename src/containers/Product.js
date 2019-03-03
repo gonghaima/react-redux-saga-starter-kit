@@ -2,12 +2,10 @@ import React, { Component, Fragment } from 'react';
 
 import { connect } from 'react-redux';
 import { getProducts, setPage, setSelection } from '../actions';
-import { pageCount } from '../modules/helpers';
 import ProductList from '../components/ProductList';
 import Summary from '../components/Summary';
-import Pagination from '../components/Pagination';
-
 import { Divider, Title } from '../modules/styled/Home';
+import { ContentWrapper } from '../modules/styled/Layout';
 
 export class Product extends Component {
   constructor(props) {
@@ -28,20 +26,9 @@ export class Product extends Component {
   render() {
     const { product, selection } = this.props;
     return (
-      <Fragment>
-        <Title>All Products</Title>
-        <Summary
-          total={product.data.length}
-          items={selection.selectionItems}
-          handleSelect={this.handleSelect}
-        />
-        <Divider />
+      <ContentWrapper>
         <ProductList product={product} selection={selection} />
-        <Pagination
-          pageCount={pageCount(selection, product)}
-          handlePageChange={this.handlePageChange}
-        />
-      </Fragment>
+      </ContentWrapper>
     );
   }
 }

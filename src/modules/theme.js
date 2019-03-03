@@ -1,8 +1,9 @@
 export const headerHeight = 70;
-
-export const appColor = '#f6f6f6';
-export const mainBgColor = '#f6f8fa';
+export const appColor = '#d9d8d9';
+export const mainBgColor = '#dcdbdc';
+export const headerBgColor = '#f3f2f2';
 export const borderColor = '#E5E5E5';
+export const titleColor_0 = '#6A6A6A';
 export const titleColor = '#6A6A6A';
 export const subTitleColor = '#BFBFBF';
 export const space = [0, 4, 8, 16, 32, 64, 128];
@@ -18,6 +19,7 @@ export default {
   palette: {
     primary: appColor,
     mainBgColor,
+    headerBgColor,
     borderColor,
     titleColor,
     selectColor,
