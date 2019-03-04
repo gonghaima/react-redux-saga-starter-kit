@@ -5,7 +5,11 @@ import { getProducts, setPage, setSelection } from '../actions';
 import ProductList from '../components/ProductList';
 import Summary from '../components/Summary';
 import { Divider, Title } from '../modules/styled/Home';
-import { ContentWrapper } from '../modules/styled/Layout';
+import {
+  ContentWrapper,
+  ContentHead,
+  ContentList
+} from '../modules/styled/Layout';
 
 export class Product extends Component {
   constructor(props) {
@@ -27,7 +31,17 @@ export class Product extends Component {
     const { product, selection } = this.props;
     return (
       <ContentWrapper>
-        <ProductList product={product} selection={selection} />
+        <ContentHead>Search</ContentHead>
+        <hr />
+        <ContentList>Suzy Cunningham</ContentList>
+        <hr />
+        <ContentList>Bobby Daniels</ContentList>
+        <hr />
+        <ContentList>John Walker</ContentList>
+        <hr />
+        <ContentList>Eddy Stevens</ContentList>
+        <hr />
+        <ContentList>Jan Williams</ContentList>
       </ContentWrapper>
     );
   }
