@@ -34,14 +34,6 @@ export class Product extends Component {
         <ContentHead>Search</ContentHead>
         <hr />
         <ContentList>Suzy Cunningham</ContentList>
-        <hr />
-        <ContentList>Bobby Daniels</ContentList>
-        <hr />
-        <ContentList>John Walker</ContentList>
-        <hr />
-        <ContentList>Eddy Stevens</ContentList>
-        <hr />
-        <ContentList>Jan Williams</ContentList>
       </ContentWrapper>
     );
   }

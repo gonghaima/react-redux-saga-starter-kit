@@ -78,19 +78,13 @@ const Divider = styled.hr`
   padding: 0;
 `;
 const HomeWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 0.3fr 1.7fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. .';
   color: ${theme.palette.titleColor};
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  ${p =>
-    responsive({
-      ix: `
-        margin-top:70px;
-      `,
-      md: `
-        margin-top:35px;
-      `
-    })};
+  padding-top: 142px;
+
   /* stylelint-enable */
 `;
 
