@@ -4,8 +4,6 @@ import { subTitleColor } from '../../modules/theme';
 import { responsive } from '../../modules/styled/utils/helpers';
 
 const NavigationWrapper = styled.nav`
-  height: 84vh;
-  background-color: ${theme.palette.itemBgColor};
   width: 230px;
   top: 0;
   bottom: 0;
@@ -14,9 +12,14 @@ const NavigationWrapper = styled.nav`
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 `;
 
+const StickyContainer = styled.div`
+  position: fixed;
+  height: 100vh;
+  background-color: ${theme.palette.itemBgColor};
+`;
+
 const NavUl = styled.ul`
   width: 230px;
-  position: fixed;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -44,4 +47,12 @@ const NavLiText = styled.span`
   padding-left: 10px;
 `;
 
-export { NavigationWrapper, NavAnchor, NavDiv, NavLiText, NavUl, NavLi };
+export {
+  NavigationWrapper,
+  NavAnchor,
+  NavDiv,
+  NavLiText,
+  NavUl,
+  NavLi,
+  StickyContainer
+};

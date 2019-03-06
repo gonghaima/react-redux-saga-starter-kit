@@ -6,6 +6,7 @@ import ProductList from '../components/ProductList';
 import Summary from '../components/Summary';
 import { Divider, Title } from '../modules/styled/Home';
 import {
+  Content,
   ContentWrapper,
   ContentHead,
   ContentList
@@ -31,9 +32,15 @@ export class Product extends Component {
     const { product, selection } = this.props;
     return (
       <ContentWrapper>
-        <ContentHead>Search</ContentHead>
-        <hr />
-        <ContentList>Suzy Cunningham</ContentList>
+        <Content>
+          <ContentHead>Search</ContentHead>
+          <hr />
+          <ContentList>Suzy Cunningham</ContentList>
+          <hr />
+          <ContentList>Bobby Daniels</ContentList>
+          <hr />
+          <ContentList>John Walker</ContentList>
+        </Content>
       </ContentWrapper>
     );
   }

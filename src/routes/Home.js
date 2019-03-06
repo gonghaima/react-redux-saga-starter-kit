@@ -31,7 +31,8 @@ const HeaderContent = styled.div`
   height: 3em;
   width: 100%;
   height:100%
-  padding: 8px 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
