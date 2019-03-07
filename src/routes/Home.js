@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaBars, FaElementor } from 'react-icons/fa';
+import { IconContext } from 'react-icons';
+import {
+  FaBars,
+  FaSortAmountDown,
+  FaEllipsisV,
+  FaGripHorizontal
+} from 'react-icons/fa';
 import theme from '../modules/theme';
 import { Container, HomeWrapper, Screen } from '../modules/styled/Home';
 import Header from '../components/Header';
@@ -63,11 +69,17 @@ const SubHeaderRight = styled.div`
   height: 100%;
   border-left: ${theme.palette.borderColor} solid 2px;
   display: flex;
+  align-items: center;
+  padding: 1%;
   justify-content: space-between;
   color: ${theme.palette.focusedColor};
 }
+`;
 
-
+const SettingOptions = styled.div`
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 export const Home = () => (
@@ -76,23 +88,16 @@ export const Home = () => (
     <SubHeader>
       <SubHeaderLeft>Users</SubHeaderLeft>
       <SubHeaderRight>
-        <h3>All Users</h3>
-        <div>
-          <FaBars />
-          <FaElementor />
-          <FaBars />
-          <FaElementor />
-        </div>
+        <div>All Users</div>
+        <SettingOptions>
+          <IconContext.Provider value={{ style: { marginRight: '4%' } }}>
+            <FaGripHorizontal />
+            <FaSortAmountDown />
+            <FaBars />
+            <FaEllipsisV />
+          </IconContext.Provider>
+        </SettingOptions>
       </SubHeaderRight>
-      {/* <SubHeaderContent>
-        <Title>Users</Title>
-        <div>
-          <FaElementor />
-          <FaBars />
-          <FaElementor />
-          <FaBars />
-        </div>
-      </SubHeaderContent> */}
     </SubHeader>
     <HomeWrapper>
       <Navigation />

@@ -22,12 +22,6 @@ const Content = styled.div`
   box-shadow: ${shadow};
 `;
 
-// const ContentHead = styled.div`
-//   display: flex;
-//   align-items: center;
-//   padding: 15px 20px;
-//   border-bottom: ${theme.palette.mainBgColor} solid 1px;
-// `;
 const ContentHead = styled.div`
   display: flex;
   align-items: center;
@@ -60,6 +54,7 @@ const ContentHeadSearch = styled.input`
   ${contentHeadCommonStyle}
 `;
 const Search = styled.input`
+  width: 100%;
   ${contentHeadCommonStyle}
 `;
 
