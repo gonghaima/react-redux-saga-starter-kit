@@ -16,66 +16,30 @@ import {
   FaUserFriends,
   FaArchive
 } from 'react-icons/fa';
+import NavListItem from '../components/navigation/NavListItem';
 export class Navigation extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
+    const NavItems = [
+      { linkText: 'All Users', LinkIcon: FaUserCircle, onClick: goTo },
+      { linkText: 'Favorites', LinkIcon: FaStar, onClick: goTo },
+      { linkText: 'Administrators', LinkIcon: FaShieldAlt, onClick: goTo },
+      { linkText: 'Non-Admins', LinkIcon: FaUserFriends, onClick: goTo },
+      { linkText: 'Archived', LinkIcon: FaArchive, onClick: goTo }
+    ];
+    const goTo = () => {
+      console.log('go to another page');
+    };
     return (
       <NavigationWrapper>
         <StickyContainer>
           <NavUl>
-            <NavLi className="nav-item">
-              <NavAnchor className="nav-link active" href="#">
-                <NavDiv>
-                  <FaUserCircle size={18} />
-                </NavDiv>
-                <NavDiv>
-                  <NavLiText>All Users</NavLiText>
-                </NavDiv>
-              </NavAnchor>
-            </NavLi>
-            <NavLi className="nav-item">
-              <NavAnchor className="nav-link active" href="#">
-                <NavDiv>
-                  <FaStar size={18} />
-                </NavDiv>
-                <NavDiv>
-                  <NavLiText>Favorites</NavLiText>
-                </NavDiv>
-              </NavAnchor>
-            </NavLi>
-            <NavLi className="nav-item">
-              <NavAnchor className="nav-link active" href="#">
-                <NavDiv>
-                  <FaShieldAlt size={18} />
-                </NavDiv>
-                <NavDiv>
-                  <NavLiText>Administrators</NavLiText>
-                </NavDiv>
-              </NavAnchor>
-            </NavLi>
-            <NavLi className="nav-item">
-              <NavAnchor className="nav-link active" href="#">
-                <NavDiv>
-                  <FaUserFriends size={18} />
-                </NavDiv>
-                <NavDiv>
-                  <NavLiText>Non-Admins</NavLiText>
-                </NavDiv>
-              </NavAnchor>
-            </NavLi>
-            <NavLi className="nav-item">
-              <NavAnchor className="nav-link active" href="#">
-                <NavDiv>
-                  <FaArchive size={18} />
-                </NavDiv>
-                <NavDiv>
-                  <NavLiText>Archived</NavLiText>
-                </NavDiv>
-              </NavAnchor>
-            </NavLi>
+            {NavItems.map(item => (
+              <NavListItem {...item} />
+            ))}
           </NavUl>
         </StickyContainer>
       </NavigationWrapper>

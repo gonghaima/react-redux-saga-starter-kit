@@ -13,6 +13,8 @@ export const anchorHoverColor = '#337ab7';
 export const itemBgColor = '#ffffff';
 
 export const easing = 'cubic-bezier(0.35, 0.01, 0.77, 0.34);';
+export const shadow = `0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);`;
 
 export default {
   breakpoints: [400, 768, 1024, 1280, 1920],

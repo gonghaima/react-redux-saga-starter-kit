@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import { connect } from 'react-redux';
+import { FaSearch, FaUserCircle, FaEllipsisV } from 'react-icons/fa';
 import { getProducts, setPage, setSelection } from '../actions';
 import ProductList from '../components/ProductList';
 import Summary from '../components/Summary';
@@ -9,7 +10,15 @@ import {
   Content,
   ContentWrapper,
   ContentHead,
-  ContentList
+  ContentList,
+  ContentListWithBorder,
+  ContentListIcon,
+  ContentListItem,
+  ContentListItemWithoutBorder,
+  ContentHeadSearch,
+  Details,
+  iconStyle,
+  Search
 } from '../modules/styled/Layout';
 
 export class Product extends Component {
@@ -33,13 +42,48 @@ export class Product extends Component {
     return (
       <ContentWrapper>
         <Content>
-          <ContentHead>Search</ContentHead>
-          <hr />
-          <ContentList>Suzy Cunningham</ContentList>
-          <hr />
-          <ContentList>Bobby Daniels</ContentList>
-          <hr />
-          <ContentList>John Walker</ContentList>
+          <ContentListWithBorder>
+            <ContentListIcon>
+              <FaSearch />
+            </ContentListIcon>
+            <ContentListItemWithoutBorder>
+              <Search placeholder="Search" />
+            </ContentListItemWithoutBorder>
+          </ContentListWithBorder>
+
+          <ContentList>
+            <ContentListIcon>
+              <FaUserCircle size={25} />
+            </ContentListIcon>
+            <ContentListItem>
+              <div>
+                <div>Suzy Cunningham</div>
+                <Details>suzy.cunn@gmail.com</Details>
+              </div>
+              <Details>Oct 1, 2019</Details>
+              <Details>one year ago</Details>
+              <Details right={8}>
+                <FaEllipsisV />
+              </Details>
+            </ContentListItem>
+          </ContentList>
+
+          <ContentList>
+            <ContentListIcon>
+              <FaUserCircle size={25} />
+            </ContentListIcon>
+            <ContentListItem>
+              <div>
+                <div>Bobby Daniels</div>
+                <Details>bobby.daniels@gmail.com</Details>
+              </div>
+              <Details>Oct 11, 2020</Details>
+              <Details>one year later</Details>
+              <Details right={8}>
+                <FaEllipsisV />
+              </Details>
+            </ContentListItem>
+          </ContentList>
         </Content>
       </ContentWrapper>
     );
