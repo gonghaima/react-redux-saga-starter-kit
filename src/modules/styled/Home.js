@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import theme, { borderColor, itemBgColor } from '../theme';
-import { subTitleColor } from '../../modules/theme';
-import { responsive } from '../../modules/styled/utils/helpers';
+import styled from "styled-components";
+import theme, { borderColor, itemBgColor } from "../theme";
+import { subTitleColor } from "../../modules/theme";
+import { responsive } from "../../modules/styled/utils/helpers";
 
 const Container = styled.div`
   @media (min-width: ${theme.breakpoints[1]}px) {
@@ -81,10 +81,17 @@ const HomeWrapper = styled.div`
   display: grid;
   grid-template-columns: 0.3fr 1.7fr;
   grid-template-rows: 1fr;
-  grid-template-areas: '. .';
+  grid-template-areas: ". .";
   color: ${theme.palette.titleColor};
   padding-top: 142px;
 
+  /* stylelint-disable */
+  ${p =>
+    responsive({
+      "ix-only": `
+        display: flex;
+      `
+    })};
   /* stylelint-enable */
 `;
 
@@ -167,7 +174,7 @@ const Pagination = styled.div`
   /* stylelint-disable */
   ${p =>
     responsive({
-      'ix-only': `
+      "ix-only": `
         font-size: 10px
       `,
       ix: `

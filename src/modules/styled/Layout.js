@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme, { shadow } from "../theme";
+import { responsive } from "../../modules/styled/utils/helpers";
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -36,6 +37,14 @@ const ContentListWithBorder = styled.div`
   align-items: center;
   padding-left: 1%;
   border-bottom: ${theme.palette.mainBgColor} solid 1px;
+  /* stylelint-disable */
+  ${p =>
+    responsive({
+      "ix-only": `
+      padding-left: 5%;
+      `
+    })};
+  /* stylelint-enable */
 `;
 
 const contentHeadCommonStyle = `font: inherit;
@@ -70,6 +79,14 @@ const ContentListItem = styled.div`
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
+  /* stylelint-disable */
+  ${p =>
+    responsive({
+      "ix-only": `
+      flex-grow:5;
+      `
+    })};
+  /* stylelint-enable */
 `;
 
 const ContentListUser = styled.div`
@@ -83,11 +100,42 @@ const ContentListItemWithoutBorder = styled.div`
   padding: 15px 0px 15px 0px;
 `;
 
+const DetailsCommon = `
+flex: 1 1 0;
+width: 0;
+color: ${theme.palette.titleColor};
+padding-right: ${props => props.right}px;
+`;
+
 const Details = styled.small`
-  flex: 1 1 0;
-  width: 0;
+  display: block;
+  ${DetailsCommon}
+`;
+
+const DetailsDesktop = styled.small`
+  display: block;
+  ${DetailsCommon}
+  /* stylelint-disable */
+  ${p =>
+    responsive({
+      "ix-only": `
+      display: none;
+    `
+    })};
+  /* stylelint-enable */
+`;
+
+const DetailsMobile = styled.small`
+  display: none;
   color: ${theme.palette.titleColor};
-  padding-right: ${props => props.right}px;
+  /* stylelint-disable */
+  ${p =>
+    responsive({
+      "ix-only": `
+      display: block;
+    `
+    })};
+  /* stylelint-enable */
 `;
 
 const DetailsEllip = styled.small`
@@ -115,6 +163,8 @@ export {
   ContentHeadSearch,
   Details,
   DetailsEllip,
+  DetailsMobile,
+  DetailsDesktop,
   iconStyle,
   Search
 };

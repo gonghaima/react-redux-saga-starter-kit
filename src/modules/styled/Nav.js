@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import theme from '../theme';
+import styled from "styled-components";
+import theme from "../theme";
+import { responsive } from "../../modules/styled/utils/helpers";
 
 const NavigationWrapper = styled.nav`
   width: 230px;
@@ -8,6 +9,14 @@ const NavigationWrapper = styled.nav`
   left: 0;
   z-index: 100;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  /* stylelint-disable */
+  ${p =>
+    responsive({
+      "ix-only": `
+        display: none;
+      `
+    })};
+  /* stylelint-enable */
 `;
 
 const StickyContainer = styled.div`

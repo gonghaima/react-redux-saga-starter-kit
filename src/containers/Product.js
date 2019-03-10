@@ -14,6 +14,8 @@ import {
   ContentListUser,
   Details,
   DetailsEllip,
+  DetailsMobile,
+  DetailsDesktop,
   Search
 } from "../modules/styled/Layout";
 
@@ -54,9 +56,10 @@ export class Product extends Component {
               <ContentListUser>
                 <div>Suzy Cunningham</div>
                 <Details>suzy.cunn@gmail.com</Details>
+                <DetailsMobile>one year ago</DetailsMobile>
               </ContentListUser>
-              <Details>Oct 1, 2019</Details>
-              <Details>one year ago</Details>
+              <DetailsDesktop>Oct 1, 2019</DetailsDesktop>
+              <DetailsDesktop>one year ago</DetailsDesktop>
               <DetailsEllip right={22}>
                 <FaEllipsisV />
               </DetailsEllip>
@@ -72,8 +75,8 @@ export class Product extends Component {
                 <div>Bobby Daniels</div>
                 <Details>bobby.daniels@gmail.com</Details>
               </ContentListUser>
-              <Details>Oct 11, 2020</Details>
-              <Details>one year later</Details>
+              <DetailsDesktop>Oct 11, 2020</DetailsDesktop>
+              <DetailsDesktop>one year later</DetailsDesktop>
               <DetailsEllip right={22}>
                 <FaEllipsisV />
               </DetailsEllip>

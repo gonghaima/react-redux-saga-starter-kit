@@ -1,17 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import { IconContext } from 'react-icons';
+import React from "react";
+import styled from "styled-components";
+import { IconContext } from "react-icons";
+import { responsive } from "../modules/styled/utils/helpers";
 import {
   FaBars,
   FaSortAmountDown,
   FaEllipsisV,
   FaGripHorizontal
-} from 'react-icons/fa';
-import theme from '../modules/theme';
-import { HomeWrapper, Screen } from '../modules/styled/Home';
-import Header from '../components/Header';
-import Product from '../containers/Product';
-import Navigation from '../containers/Navigation';
+} from "react-icons/fa";
+import theme from "../modules/theme";
+import { HomeWrapper, Screen } from "../modules/styled/Home";
+import Header from "../components/Header";
+import Product from "../containers/Product";
+import Navigation from "../containers/Navigation";
 
 const SubHeader = styled.div`
   top: 70px;
@@ -43,6 +44,13 @@ const SubHeaderLeft = styled.h3`
   justify-content: center;
   padding-left: 2%;
   color: ${theme.palette.focusedColor} !important;
+  ${p =>
+    responsive({
+      "ix-only": `
+        display: none;
+      `
+    })};
+  /* stylelint-enable */
 `;
 
 const SubHeaderRight = styled.div`
@@ -71,7 +79,7 @@ export const Home = () => (
       <SubHeaderRight>
         <div>All Users</div>
         <SettingOptions>
-          <IconContext.Provider value={{ style: { marginRight: '4%' } }}>
+          <IconContext.Provider value={{ style: { marginRight: "4%" } }}>
             <FaGripHorizontal />
             <FaSortAmountDown />
             <FaBars />
