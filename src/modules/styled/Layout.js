@@ -56,9 +56,12 @@ const ContentListIcon = styled.div`
   flex-grow: 1;
   justify-content: center;
   display: flex;
+  flex: 1 1 0;
+  width: 0;
 `;
 const ContentListItem = styled.div`
   ${contentHeadCommonStyle}
+  flex-basis: 0;
   flex-grow:9;
   padding: 15px 0px 15px 0px;
   color: ${theme.palette.focusedColor}
@@ -68,6 +71,12 @@ const ContentListItem = styled.div`
   justify-content: space-between;
   font-weight: bold;
 `;
+
+const ContentListUser = styled.div`
+  flex: 1 1 0;
+  width: 0;
+`;
+
 const ContentListItemWithoutBorder = styled.div`
   ${contentHeadCommonStyle}
   flex-grow:9;
@@ -75,6 +84,14 @@ const ContentListItemWithoutBorder = styled.div`
 `;
 
 const Details = styled.small`
+  flex: 1 1 0;
+  width: 0;
+  color: ${theme.palette.titleColor};
+  padding-right: ${props => props.right}px;
+`;
+
+const DetailsEllip = styled.small`
+  width: 0;
   color: ${theme.palette.titleColor};
   padding-right: ${props => props.right}px;
 `;
@@ -93,9 +110,11 @@ export {
   ContentListWithBorder,
   ContentListIcon,
   ContentListItem,
+  ContentListUser,
   ContentListItemWithoutBorder,
   ContentHeadSearch,
   Details,
+  DetailsEllip,
   iconStyle,
   Search
 };

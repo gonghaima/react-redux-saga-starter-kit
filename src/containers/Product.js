@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { connect } from 'react-redux';
-import { FaSearch, FaUserCircle, FaEllipsisV } from 'react-icons/fa';
-import { getProducts, setPage, setSelection } from '../actions';
+import { connect } from "react-redux";
+import { FaSearch, FaUserCircle, FaEllipsisV } from "react-icons/fa";
+import { getProducts, setPage, setSelection } from "../actions";
 import {
   Content,
   ContentWrapper,
@@ -11,9 +11,11 @@ import {
   ContentListIcon,
   ContentListItem,
   ContentListItemWithoutBorder,
+  ContentListUser,
   Details,
+  DetailsEllip,
   Search
-} from '../modules/styled/Layout';
+} from "../modules/styled/Layout";
 
 export class Product extends Component {
   constructor(props) {
@@ -49,15 +51,15 @@ export class Product extends Component {
               <FaUserCircle size={25} />
             </ContentListIcon>
             <ContentListItem>
-              <div>
+              <ContentListUser>
                 <div>Suzy Cunningham</div>
                 <Details>suzy.cunn@gmail.com</Details>
-              </div>
+              </ContentListUser>
               <Details>Oct 1, 2019</Details>
               <Details>one year ago</Details>
-              <Details right={8}>
+              <DetailsEllip right={22}>
                 <FaEllipsisV />
-              </Details>
+              </DetailsEllip>
             </ContentListItem>
           </ContentList>
 
@@ -66,15 +68,15 @@ export class Product extends Component {
               <FaUserCircle size={25} />
             </ContentListIcon>
             <ContentListItem>
-              <div>
+              <ContentListUser>
                 <div>Bobby Daniels</div>
                 <Details>bobby.daniels@gmail.com</Details>
-              </div>
+              </ContentListUser>
               <Details>Oct 11, 2020</Details>
               <Details>one year later</Details>
-              <Details right={8}>
+              <DetailsEllip right={22}>
                 <FaEllipsisV />
-              </Details>
+              </DetailsEllip>
             </ContentListItem>
           </ContentList>
         </Content>
