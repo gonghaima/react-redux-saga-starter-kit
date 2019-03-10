@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
 import { NavAnchor, NavDiv, NavLi, NavLiText } from '../../modules/styled/Nav';
 
 const NavListItem = ({ linkText, LinkIcon, onClick }) => {

@@ -1,23 +1,17 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import { FaSearch, FaUserCircle, FaEllipsisV } from 'react-icons/fa';
 import { getProducts, setPage, setSelection } from '../actions';
-import ProductList from '../components/ProductList';
-import Summary from '../components/Summary';
-import { Divider, Title } from '../modules/styled/Home';
 import {
   Content,
   ContentWrapper,
-  ContentHead,
   ContentList,
   ContentListWithBorder,
   ContentListIcon,
   ContentListItem,
   ContentListItemWithoutBorder,
-  ContentHeadSearch,
   Details,
-  iconStyle,
   Search
 } from '../modules/styled/Layout';
 
@@ -38,7 +32,6 @@ export class Product extends Component {
     this.props.dispatch(getProducts());
   }
   render() {
-    const { product, selection } = this.props;
     return (
       <ContentWrapper>
         <Content>

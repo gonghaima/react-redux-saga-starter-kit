@@ -1,44 +1,37 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import {
-  NavAnchor,
   NavigationWrapper,
-  NavDiv,
   NavUl,
-  StickyContainer,
-  NavLi,
-  NavLiText
-} from '../modules/styled/Nav';
+  StickyContainer
+} from "../modules/styled/Nav";
 import {
   FaUserCircle,
   FaStar,
   FaShieldAlt,
   FaUserFriends,
   FaArchive
-} from 'react-icons/fa';
-import NavListItem from '../components/navigation/NavListItem';
+} from "react-icons/fa";
+import NavListItem from "../components/navigation/NavListItem";
 export class Navigation extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const NavItems = [
-      { linkText: 'All Users', LinkIcon: FaUserCircle, onClick: goTo },
-      { linkText: 'Favorites', LinkIcon: FaStar, onClick: goTo },
-      { linkText: 'Administrators', LinkIcon: FaShieldAlt, onClick: goTo },
-      { linkText: 'Non-Admins', LinkIcon: FaUserFriends, onClick: goTo },
-      { linkText: 'Archived', LinkIcon: FaArchive, onClick: goTo }
-    ];
     const goTo = () => {
-      console.log('go to another page');
+      console.log("go to another page");
     };
+    const NavItems = [
+      { linkText: "All Users", LinkIcon: FaUserCircle, onClick: goTo },
+      { linkText: "Favorites", LinkIcon: FaStar, onClick: goTo },
+      { linkText: "Administrators", LinkIcon: FaShieldAlt, onClick: goTo },
+      { linkText: "Non-Admins", LinkIcon: FaUserFriends, onClick: goTo },
+      { linkText: "Archived", LinkIcon: FaArchive, onClick: goTo }
+    ];
+
     return (
       <NavigationWrapper>
         <StickyContainer>
           <NavUl>
-            {NavItems.map(item => (
-              <NavListItem {...item} />
+            {NavItems.map((item, k) => (
+              <NavListItem key={k} {...item} />
             ))}
           </NavUl>
         </StickyContainer>

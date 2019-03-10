@@ -1,7 +1,5 @@
-import styled from 'styled-components';
-import theme, { borderColor, itemBgColor, shadow } from '../theme';
-import { subTitleColor } from '../theme';
-import { responsive } from './utils/helpers';
+import styled from "styled-components";
+import theme, { shadow } from "../theme";
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -38,10 +36,6 @@ const ContentListWithBorder = styled.div`
   align-items: center;
   padding-left: 1%;
   border-bottom: ${theme.palette.mainBgColor} solid 1px;
-`;
-
-const ContentListMain = styled.div`
-  padding: 15px 0px 15px 20px;
 `;
 
 const contentHeadCommonStyle = `font: inherit;
@@ -85,15 +79,10 @@ const Details = styled.small`
   padding-right: ${props => props.right}px;
 `;
 
-const iconStyle11 = `    
-background: darkgray;
-color: lightgray;
-border-radius: 9px;
-border: 0;`;
 const iconStyle = {
-  background: 'darkgray',
-  color: 'lightgray',
-  borderRadius: '9px',
+  background: "darkgray",
+  color: "lightgray",
+  borderRadius: "9px",
   border: 0
 };
 export {

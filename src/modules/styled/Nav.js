@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import theme, { borderColor, itemBgColor } from '../theme';
-import { subTitleColor } from '../../modules/theme';
-import { responsive } from '../../modules/styled/utils/helpers';
+import theme from '../theme';
 
 const NavigationWrapper = styled.nav`
   width: 230px;

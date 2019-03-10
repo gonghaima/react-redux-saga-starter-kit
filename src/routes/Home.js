@@ -8,7 +8,7 @@ import {
   FaGripHorizontal
 } from 'react-icons/fa';
 import theme from '../modules/theme';
-import { Container, HomeWrapper, Screen } from '../modules/styled/Home';
+import { HomeWrapper, Screen } from '../modules/styled/Home';
 import Header from '../components/Header';
 import Product from '../containers/Product';
 import Navigation from '../containers/Navigation';
@@ -32,25 +32,6 @@ const SubHeader = styled.div`
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   height: 70px;
   z-index: 1201;
-`;
-
-const SubHeaderContent = styled.div`
-  color: ${theme.palette.focusedColor};
-  height: 3em;
-  width: 100%;
-  height:100%
-  padding: 8px 16px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  @media (min-width: 768px) {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
 `;
 
 const SubHeaderLeft = styled.h3`

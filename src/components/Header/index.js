@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { FaBars, FaElementor } from 'react-icons/fa';
 import {
   Bars,
