@@ -142,6 +142,14 @@ const DetailsEllip = styled.small`
   width: 0;
   color: ${theme.palette.titleColor};
   padding-right: ${props => props.right}px;
+  /* stylelint-disable */
+  ${p =>
+    responsive({
+      "ix-only": `
+      padding-right:${p.mob}px;
+    `
+    })};
+  /* stylelint-enable */
 `;
 
 const iconStyle = {

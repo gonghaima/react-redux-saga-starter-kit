@@ -60,7 +60,7 @@ export class Product extends Component {
               </ContentListUser>
               <DetailsDesktop>Oct 1, 2019</DetailsDesktop>
               <DetailsDesktop>one year ago</DetailsDesktop>
-              <DetailsEllip right={22}>
+              <DetailsEllip right={22} mob={40}>
                 <FaEllipsisV />
               </DetailsEllip>
             </ContentListItem>
@@ -77,7 +77,7 @@ export class Product extends Component {
               </ContentListUser>
               <DetailsDesktop>Oct 11, 2020</DetailsDesktop>
               <DetailsDesktop>one year later</DetailsDesktop>
-              <DetailsEllip right={22}>
+              <DetailsEllip right={22} mob={40}>
                 <FaEllipsisV />
               </DetailsEllip>
             </ContentListItem>
