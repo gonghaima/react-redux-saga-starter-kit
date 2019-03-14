@@ -90,6 +90,9 @@ const HomeWrapper = styled.div`
     responsive({
       "ix-only": `
         display: flex;
+      `,
+      lg: `
+        grid-template-columns: 0.1fr 1.9fr;
       `
     })};
   /* stylelint-enable */
