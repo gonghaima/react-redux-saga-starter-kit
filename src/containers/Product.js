@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 import { FaSearch, FaUserCircle, FaEllipsisV } from "react-icons/fa";
-import { getProducts, setPage, setSelection } from "../actions";
+import { getProducts, getUsers, setPage, setSelection } from "../actions";
 import {
   Content,
   ContentWrapper,
@@ -34,8 +34,13 @@ export class Product extends Component {
   }
   componentDidMount() {
     this.props.dispatch(getProducts());
+    this.props.dispatch(getUsers());
   }
   render() {
+    const { product, selection, user } = this.props;
+    console.log(user);
+    // console.log(product);
+
     return (
       <ContentWrapper>
         <Content>
@@ -89,7 +94,11 @@ export class Product extends Component {
 }
 
 function mapStateToProps(state) {
-  return { product: state.product, selection: state.selection };
+  return {
+    product: state.product,
+    selection: state.selection,
+    user: state.user
+  };
 }
 
 export default connect(mapStateToProps)(Product);

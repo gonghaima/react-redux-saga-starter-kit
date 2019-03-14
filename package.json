@@ -23,8 +23,8 @@
   },
   "proxy": "http://localhost:8081",
   "scripts": {
-    "start": "set REACT_APP_ENV='local' && set PORT=8080 && react-scripts start",
-    "startmac": "export REACT_APP_ENV='local' && PORT=8080 react-scripts start",
+    "startWindows": "set REACT_APP_ENV='local' && set PORT=8080 && react-scripts start",
+    "start": "export REACT_APP_ENV='local' && PORT=8080 react-scripts start",
     "integration": "yarn server & export REACT_APP_ENV='integration' && PORT=8080 react-scripts start",
     "server": "node server/index",
     "build": "react-scripts build",

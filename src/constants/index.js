@@ -1,4 +1,4 @@
-import keyMirror from 'fbjs/lib/keyMirror';
+import keyMirror from "fbjs/lib/keyMirror";
 
 const ActionTypes = keyMirror({
   EXCEPTION: undefined,
@@ -6,15 +6,18 @@ const ActionTypes = keyMirror({
   PRODUCT_GET_SUCCESS: undefined,
   PRODUCT_GET_FAILURE: undefined,
   SELECTION_CHANGE: undefined,
-  PAGE_CHANGE: undefined
+  PAGE_CHANGE: undefined,
+  GET_USERS: undefined,
+  USER_GET_SUCCESS: undefined,
+  USER_GET_FAILURE: undefined
 });
 
 const STATUS = {
-  IDLE: 'idle',
-  RUNNING: 'running',
-  READY: 'ready',
-  SUCCESS: 'success',
-  ERROR: 'error'
+  IDLE: "idle",
+  RUNNING: "running",
+  READY: "ready",
+  SUCCESS: "success",
+  ERROR: "error"
 };
 
 export { ActionTypes, STATUS };
