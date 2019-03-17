@@ -51,6 +51,11 @@ const contentHeadCommonStyle = `font: inherit;
 outline: none;
 border: 0;
 `;
+const contentHeadCommonStyleObj = {
+  font: "inherit",
+  outline: "none",
+  border: 0
+};
 
 const ContentHeadSearch = styled.input`
   margin-left: 15px;
@@ -88,6 +93,23 @@ const ContentListItem = styled.div`
     })};
   /* stylelint-enable */
 `;
+
+const ContentItem = styled.div(props => ({
+  ...contentHeadCommonStyleObj,
+  flexBasis: 0,
+  flexGrow: 9,
+  padding: "15px 0px 15px 0px",
+  color: theme.palette.focusedColor,
+  borderBottom: props.last ? "none" : `${theme.palette.mainBgColor} solid 1px;`,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  fontWight: "bold"
+}));
+
+const generateContentItemResponsive = responsive({
+  "ix-only": `flex-grow:5;`
+});
 
 const ContentListUser = styled.div`
   flex: 1 1 0;
@@ -166,6 +188,8 @@ export {
   ContentListWithBorder,
   ContentListIcon,
   ContentListItem,
+  ContentItem,
+  generateContentItemResponsive,
   ContentListUser,
   ContentListItemWithoutBorder,
   ContentHeadSearch,

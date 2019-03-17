@@ -34,6 +34,7 @@ export class Product extends Component {
     const {
       users: { data }
     } = this.props;
+    const userCount = data.length;
 
     return (
       <ContentWrapper>
@@ -47,8 +48,8 @@ export class Product extends Component {
             </ContentListItemWithoutBorder>
           </ContentListWithBorder>
 
-          {data.map(user => (
-            <ContentList key={user.id} user={user} />
+          {data.map((user, i) => (
+            <ContentList key={user.id} user={user} last={userCount === i + 1} />
           ))}
         </Content>
       </ContentWrapper>

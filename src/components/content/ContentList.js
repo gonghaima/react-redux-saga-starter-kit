@@ -4,6 +4,8 @@ import {
   ContentList,
   ContentListIcon,
   ContentListItem,
+  ContentItem,
+  generateContentItemResponsive,
   ContentListUser,
   Details,
   DetailsEllip,
@@ -11,13 +13,13 @@ import {
   DetailsDesktop
 } from "../../modules/styled/Layout";
 
-export default ({ user }) => {
+export default ({ user, last }) => {
   return (
     <ContentList>
       <ContentListIcon>
         <FaUserCircle size={25} />
       </ContentListIcon>
-      <ContentListItem>
+      <ContentItem css={generateContentItemResponsive()} last={last}>
         <ContentListUser>
           <div>{user.fullName}</div>
           <Details>{user.email}</Details>
@@ -28,7 +30,7 @@ export default ({ user }) => {
         <DetailsEllip right={22} mob={40}>
           <FaEllipsisV />
         </DetailsEllip>
-      </ContentListItem>
+      </ContentItem>
     </ContentList>
   );
 };
