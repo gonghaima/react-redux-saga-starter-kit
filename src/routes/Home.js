@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import theme from "../modules/theme";
 import { HomeWrapper, Screen } from "../modules/styled/Home";
-import Header from "../components/Header";
+import Header from "../components/header/index";
 import Product from "../containers/Product";
 import Navigation from "../containers/Navigation";
 

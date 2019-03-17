@@ -11,7 +11,7 @@ export const userState = {
 };
 
 export default {
-  user: handleActions(
+  users: handleActions(
     {
       [ActionTypes.GET_USERS]: (state, { payload }) => {
         const data = [];
