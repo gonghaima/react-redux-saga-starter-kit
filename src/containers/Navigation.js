@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { filterUsers } from "../actions";
 import {
   NavigationWrapper,
   NavUl,
@@ -15,23 +16,44 @@ import {
 import NavListItem from "../components/navigation/NavListItem";
 export class Navigation extends Component {
   render() {
-    const goTo = () => {
-      console.log("go to another page");
+    const goTo = path => {
+      this.props.dispatch(filterUsers("Test filter string"));
+      console.log(`--${path}--`);
     };
     const NavItems = [
-      { linkText: "All Users", LinkIcon: FaUserCircle, onClick: goTo },
-      { linkText: "Favorites", LinkIcon: FaStar, onClick: goTo },
-      { linkText: "Administrators", LinkIcon: FaShieldAlt, onClick: goTo },
-      { linkText: "Non-Admins", LinkIcon: FaUserFriends, onClick: goTo },
-      { linkText: "Archived", LinkIcon: FaArchive, onClick: goTo }
+      {
+        linkText: "All Users",
+        path: "all",
+        LinkIcon: FaUserCircle
+      },
+      {
+        linkText: "Favorites",
+        path: "favorites",
+        LinkIcon: FaStar
+      },
+      {
+        linkText: "administrator",
+        path: "administrator",
+        LinkIcon: FaShieldAlt
+      },
+      {
+        linkText: "Non-Admins",
+        path: "non-admin",
+        LinkIcon: FaUserFriends
+      },
+      {
+        linkText: "Archived",
+        path: "archived",
+        LinkIcon: FaArchive
+      }
     ];
 
     return (
       <NavigationWrapper>
         <StickyContainer>
           <NavUl>
-            {NavItems.map((item, k) => (
-              <NavListItem key={k} {...item} />
+            {NavItems.map((item, i) => (
+              <NavListItem key={i} onClick={goTo} {...item} />
             ))}
           </NavUl>
         </StickyContainer>

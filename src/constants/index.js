@@ -9,7 +9,8 @@ const ActionTypes = keyMirror({
   PAGE_CHANGE: undefined,
   GET_USERS: undefined,
   USER_GET_SUCCESS: undefined,
-  USER_GET_FAILURE: undefined
+  USER_GET_FAILURE: undefined,
+  FILTER_USERS: undefined
 });
 
 const STATUS = {

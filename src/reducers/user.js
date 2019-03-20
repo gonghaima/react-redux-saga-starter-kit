@@ -34,7 +34,20 @@ export default {
         immutable(state, {
           message: { $set: payload.message || "" },
           status: { $set: STATUS.ERROR }
-        })
+        }),
+      [ActionTypes.FILTER_USERS]: (state, { payload }) => {
+        const data = [];
+        console.log(`payload--${JSON.stringify(payload)}`);
+        console.log(`state--${JSON.stringify(state)}`);
+
+        return immutable(state, {
+          data: {
+            $set: data
+          },
+          message: { $set: "" },
+          status: { $set: STATUS.RUNNING }
+        });
+      }
     },
     userState
   )
