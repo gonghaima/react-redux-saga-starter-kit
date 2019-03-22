@@ -39,10 +39,13 @@ export default {
         const data = [];
         console.log(`payload--${JSON.stringify(payload)}`);
         console.log(`state--${JSON.stringify(state)}`);
+        const filteredData = state.data.filter(
+          user => user.administrator === true
+        );
 
         return immutable(state, {
           data: {
-            $set: data
+            $set: filteredData
           },
           message: { $set: "" },
           status: { $set: STATUS.RUNNING }

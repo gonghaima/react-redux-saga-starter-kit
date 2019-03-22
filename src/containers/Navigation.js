@@ -50,6 +50,7 @@ export class Navigation extends Component {
 
   filterUser = path => () => {
     console.log(path);
+    this.props.dispatch(filterUsers(path));
   };
   render() {
     return (
