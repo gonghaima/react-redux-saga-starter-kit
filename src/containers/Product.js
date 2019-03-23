@@ -11,6 +11,7 @@ import {
   ContentListItemWithoutBorder,
   Search
 } from "../modules/styled/Layout";
+import { filterUsers } from "../actions";
 import ContentList from "../components/content/ContentList";
 
 export class Product extends Component {
@@ -18,6 +19,7 @@ export class Product extends Component {
     super(props);
     this.handleSelect = this.handleSelect.bind(this);
     this.handlePageChange = this.handlePageChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handlePageChange(event) {
@@ -26,15 +28,18 @@ export class Product extends Component {
   handleSelect(event) {
     this.props.dispatch(setSelection(event.target.value));
   }
+  handleChange(event) {
+    this.props.dispatch(filterUsers(event.target.value));
+  }
   componentDidMount() {
     this.props.dispatch(getProducts());
     this.props.dispatch(getUsers());
   }
   render() {
     const {
-      users: { data }
+      users: { filteredData }
     } = this.props;
-    const userCount = data.length;
+    const userCount = filteredData.length;
 
     return (
       <ContentWrapper>
@@ -44,11 +49,11 @@ export class Product extends Component {
               <FaSearch />
             </ContentListIcon>
             <ContentListItemWithoutBorder>
-              <Search placeholder="Search" />
+              <Search onChange={this.handleChange} placeholder="Search" />
             </ContentListItemWithoutBorder>
           </ContentListWithBorder>
 
-          {data.map((user, i) => (
+          {filteredData.map((user, i) => (
             <ContentList key={user.id} user={user} last={userCount === i + 1} />
           ))}
         </Content>
