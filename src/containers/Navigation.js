@@ -6,42 +6,12 @@ import {
   NavUl,
   StickyContainer
 } from "../modules/styled/Nav";
-import {
-  FaUserCircle,
-  FaStar,
-  FaShieldAlt,
-  FaUserFriends,
-  FaArchive
-} from "react-icons/fa";
 import NavListItem from "../components/navigation/NavListItem";
+import config from "../config";
 
-const NavItems = [
-  {
-    linkText: "All Users",
-    path: "all",
-    LinkIcon: FaUserCircle
-  },
-  {
-    linkText: "Favorites",
-    path: "favorites",
-    LinkIcon: FaStar
-  },
-  {
-    linkText: "administrator",
-    path: "administrator",
-    LinkIcon: FaShieldAlt
-  },
-  {
-    linkText: "Non-Admins",
-    path: "non-admin",
-    LinkIcon: FaUserFriends
-  },
-  {
-    linkText: "Archived",
-    path: "archived",
-    LinkIcon: FaArchive
-  }
-];
+const { userMapping } = config;
+const Navs = Object.keys(userMapping).map(key => userMapping[key]);
+
 export class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -57,7 +27,7 @@ export class Navigation extends Component {
       <NavigationWrapper>
         <StickyContainer>
           <NavUl>
-            {NavItems.map((item, i) => (
+            {Navs.map((item, i) => (
               <NavListItem key={i} navigate={this.filterUser} {...item} />
             ))}
           </NavUl>

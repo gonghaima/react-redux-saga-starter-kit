@@ -1,6 +1,6 @@
 import { handleActions } from "redux-actions";
 import immutable from "immutability-helper";
-
+import config from "../config";
 import { ActionTypes, STATUS } from "../constants/index";
 
 export const userState = {
@@ -8,7 +8,8 @@ export const userState = {
   filteredData: [],
   status: STATUS.IDLE,
   message: "",
-  query: ""
+  query: "All Users",
+  selected: config.userMapping.all
 };
 
 export default {
@@ -48,6 +49,7 @@ export default {
         console.log(`state--${JSON.stringify(state)}`);
 
         let filteredData = [];
+        let selectedGroup = {};
         if (payload.query === "") {
           filteredData = state.data;
         }
@@ -58,22 +60,27 @@ export default {
               user.email.indexOf(payload.query) > -1
           );
         }
-        if (payload.query === "administrator") {
-          filteredData = state.data.filter(user => user.administrator === true);
+        if (payload.query === config.userMapping.all.queryValue) {
+          filteredData = state.data;
+          selectedGroup = config.userMapping.all;
         }
-        if (payload.query === "non-admin") {
+        if (payload.query === config.userMapping.favorites.queryValue) {
+          filteredData = state.data.filter(user => user.favorite === true);
+          selectedGroup = config.userMapping.favorites;
+        }
+        if (payload.query === config.userMapping.administrator.queryValue) {
+          filteredData = state.data.filter(user => user.administrator === true);
+          selectedGroup = config.userMapping.administrator;
+        }
+        if (payload.query === config.userMapping.nonAdmin.queryValue) {
           filteredData = state.data.filter(
             user => user.administrator === false
           );
+          selectedGroup = config.userMapping.nonAdmin;
         }
-        if (payload.query === "favorites") {
-          filteredData = state.data.filter(user => user.favorite === true);
-        }
-        if (payload.query === "all") {
-          filteredData = state.data;
-        }
-        if (payload.query === "archived") {
+        if (payload.query === config.userMapping.archived.queryValue) {
           filteredData = state.data.filter(user => user.archived === true);
+          selectedGroup = config.userMapping.archived;
         }
 
         return immutable(state, {
@@ -81,7 +88,13 @@ export default {
             $set: filteredData
           },
           message: { $set: "" },
-          status: { $set: STATUS.RUNNING }
+          status: { $set: STATUS.RUNNING },
+          query: {
+            $set: payload.query
+          },
+          selected: {
+            $set: selectedGroup
+          }
         });
       }
     },
