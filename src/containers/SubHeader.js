@@ -22,6 +22,7 @@ export class TitleHeader extends Component {
     const {
       users: { selected }
     } = this.props;
+    debugger;
     return (
       <SubHeader>
         <SubHeaderLeft>Users</SubHeaderLeft>

@@ -36,10 +36,9 @@ export class Product extends Component {
     this.props.dispatch(getUsers());
   }
   render() {
-    const {
-      users: { filteredData }
-    } = this.props;
-    const userCount = filteredData.length;
+    const filteredData =
+      (this.props.users && this.props.users.filteredData) || [];
+    const userCount = (filteredData && filteredData.length) || 0;
 
     return (
       <ContentWrapper>

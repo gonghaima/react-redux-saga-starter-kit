@@ -1,4 +1,4 @@
-import { expectSaga } from 'redux-saga-test-plan';
+
 import product, { getProducts } from './product';
 import { ActionTypes } from '../constants';
 
