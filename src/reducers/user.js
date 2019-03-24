@@ -45,10 +45,6 @@ export default {
           status: { $set: STATUS.ERROR }
         }),
       [ActionTypes.FILTER_USERS]: (state, { payload }) => {
-        const data = [];
-        console.log(`payload--${JSON.stringify(payload)}`);
-        console.log(`state--${JSON.stringify(state)}`);
-
         const { filteredData, selectedGroup } = filterUsers(
           payload,
           config,
